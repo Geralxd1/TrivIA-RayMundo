@@ -18,10 +18,10 @@ const Home = () => {
             <Box component={'div'}>
                 <Box
                     component={'img'}
-                    src='/assets/LogoTrivIA.svg'
-                    sx={{ width: '30vw' }}
+                    src='/assets/LogoCompuesto.svg'
+                    sx={{ width: {xs: '50vh', md:'70vh'} }}
                 />
-                <Box component={'div'} sx={{ display: 'flex', flexDirection: 'column', height: '50%' }}>
+                <Box component={'div'} sx={{ display: 'flex', alignItems:'center',flexDirection: 'column', zIndex:'0' }}>
                     <BotonPrincipal texto={'Jugar'} />
                     <BotonPrincipal texto={'Ranking'} />
                 </Box>
