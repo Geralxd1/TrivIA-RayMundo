@@ -6,8 +6,14 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-const Respuesta = ({ abrir }) => {
+import lugares from "../../assets/Lugares.json"
+import { Box } from '@mui/material';
+
+const Respuesta = ({ abrir, estado, onClick }) => {
     const [open, setOpen] = useState(false);
+    const [lugar, setLugar] = useState('');
+    const [datosLugar, setDatosLugar] = useState({});
+
 
     useEffect(() => {
         if (abrir) {
@@ -26,14 +32,22 @@ const Respuesta = ({ abrir }) => {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
         >
-            <DialogTitle id="alert-dialog-title">Tu respuesta fue: correcta</DialogTitle>
+            <DialogTitle id="alert-dialog-title">Tu respuesta fue: {estado}</DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                    Aqui ira la informacion de el lugar/plato turistico y una imagen referencial.
+                    {lugares["Cataratas de Gocta"].info}
+                    <Box component={'img'}
+                        src={lugares["Cataratas de Gocta"].url}
+                        sx={{
+                            width:'100%',
+                            border:'2px solid black',
+                            marginTop:'1rem'
+                        }}
+                    />
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose} autoFocus endIcon={<NavigateNextIcon />}>
+                <Button onClick={() => {setOpen(false),onClick('next')}} autoFocus endIcon={<NavigateNextIcon />}>
                     Continuar
                 </Button>
             </DialogActions>

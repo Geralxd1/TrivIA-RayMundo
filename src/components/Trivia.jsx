@@ -4,23 +4,19 @@ import TextoPregunta from './Textos/TextoPregunta'
 import Alternativas from './Botones/Alternativas'
 
 const Trivia = ({ eleccionAlternativa }) => {
-    const [tiempoRestante, setTiempoRestante] = useState(10);
+    const [tiempoRestante, setTiempoRestante] = useState(30);
     const [eleccionRealizada, setEleccionRealizada] = useState(false);
-    const [score, setScore] = useState(0);
+    
     const obtenerScore = () => {
-        const scoreString = sessionStorage.getItem('score');
-        return scoreString ? parseInt(scoreString, 10) : 0;
-    };
+        // Lógica para obtener el score desde sessionStorage
+        return sessionStorage.getItem('score') || 0; // Puedes ajustar según tu estructura de datos
+    }
+    const [score, setScore] = useState(obtenerScore());
     useEffect(() => {
-        // Obtener el score almacenado en sessionStorage al montar el componente
-        const scoreString = sessionStorage.getItem('score');
-        const initialScore = scoreString ? parseInt(scoreString, 10) : 0;
-        setScore(initialScore);
-
-        // Actualizar el score en el estado cada vez que cambie en sessionStorage
         const scoreChangeListener = (event) => {
             if (event.key === 'score') {
-                setScore(parseInt(event.newValue, 10));
+                // Cuando hay un cambio en el almacenamiento, obtén los datos actualizados y actualiza el estado
+                setScore(obtenerScore());
             }
         };
 
@@ -32,8 +28,10 @@ const Trivia = ({ eleccionAlternativa }) => {
             window.removeEventListener('storage', scoreChangeListener);
         };
     }, []);
+
+    // Función para obtener el score desde sessionStorage
+
     useEffect(() => {
-        obtenerScore()
         const temporizador = setInterval(() => {
             setTiempoRestante((prevTiempo) => (prevTiempo > 0 ? prevTiempo - 1 : 0));
         }, 1000);
@@ -107,7 +105,7 @@ const Trivia = ({ eleccionAlternativa }) => {
                             WebkitTextStrokeColor: 'black',
                             fontSize: '2rem'
                         }}>
-                        {score}
+                        {sessionStorage.getItem('score')}
                     </Box>
                 </Box>
             </Box>
@@ -128,7 +126,7 @@ const Trivia = ({ eleccionAlternativa }) => {
                         WebkitTextStrokeColor: 'black',
                         fontSize: '1.75rem'
                     }}>
-                    {score}
+                    {sessionStorage.getItem('score')}
                 </Box>
             </Box>
             <Paper
@@ -143,10 +141,10 @@ const Trivia = ({ eleccionAlternativa }) => {
                     borderRadius: '50px',
                     height: { xs: '90vh', md: '85vh' },
                 }}>
-                <TextoPregunta texto={'¿Cual destino turistico se encuentra en Puno?'} />
+                <TextoPregunta texto={'¿Cual destino turistico se encuentra en Amazonas?'} />
                 <Alternativas texto={'Machu Picchu'} onClick={() => eleccionAlternativa('a')} />
                 <Alternativas texto={'Lago Titicaca'} onClick={() => eleccionAlternativa('b')} />
-                <Alternativas texto={'Cañon del Colca'} onClick={() => eleccionAlternativa('c')} />
+                <Alternativas texto={'Cataratas de Gocta'} onClick={() => eleccionAlternativa('c')} />
             </Paper>
         </Box>
     )

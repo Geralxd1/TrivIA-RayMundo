@@ -55,21 +55,21 @@ const Ranking = ({ cambiarPantalla }) => {
                         overflowY: 'scroll', // Habilita el desbordamiento vertical solo para este contenedor
                     }}
                 >
-                    <ItemRanking puesto={1} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={2} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={3} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={4} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={5} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={1} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={2} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={3} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={4} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={5} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={1} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={2} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={3} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={4} nombre={'Geral'} puntaje={'10000'} />
-                    <ItemRanking puesto={5} nombre={'Geral'} puntaje={'10000'} />
+                    <ItemRanking puesto={1} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={2} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={3} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={4} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={5} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={6} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={7} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={8} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={9} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={10} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={11} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={12} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={13} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={14} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    <ItemRanking puesto={15} nombre={'Nombre Jugador'} puntaje={'10000'} />
                 </Box>
             </Paper>
             <Box component={'div'}

@@ -79,6 +79,12 @@ const Home = () => {
     const reiniciarScore = () => {
         sessionStorage.removeItem('score');
     };
+
+    const preguntarDeNuevo = (algo) =>{
+        if(algo === 'next'){
+            cambiarPantalla('trivia')
+        }
+    }
     const eleccionAlternativa = (alternativa) => {
         actualizarScore(100)
         console.log(sessionStorage.getItem('score'))
@@ -91,6 +97,9 @@ const Home = () => {
                 break;
             case 'c':
                 console.log('se clickeo c');
+                break;
+            case '':
+                console.log('no se envio nada');
                 break;
             default:
         }
@@ -180,7 +189,7 @@ const Home = () => {
                 // Pantalla de trivia con pregunta, alternativas y resultados
                 <Trivia eleccionAlternativa={eleccionAlternativa} />
             )}
-            {mostrarRespuesta && <Respuesta abrir={true} />}
+            {mostrarRespuesta && <Respuesta abrir={true} estado={'Correcta'} onClick={preguntarDeNuevo} />}
         </Box >
     )
 }
