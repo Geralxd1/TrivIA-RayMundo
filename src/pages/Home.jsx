@@ -13,6 +13,7 @@ import Ranking from '../components/Ranking/Ranking';
 import Nombre from '../components/Nombre';
 import Trivia from '../components/Trivia';
 import Respuesta from '../components/Dialogo/Respuesta';
+import Categoria from '../components/Categoria';
 
 //Llamada a endpoints
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
         console.log('esats en juego con nombre', nombre)
         setNombreJugador(nombre)
         guardarScore(0)
-        cambiarPantalla('trivia')
+        cambiarPantalla('categoria')
         // Lógica para iniciar el juego con el nombre proporcionado
         // Aquí podrías manejar el inicio del juego, cambiar la pantalla, etc.
     };
@@ -182,7 +183,7 @@ const Home = () => {
             )}
             {pantalla === 'categoria' && (
                 // Pantalla para elegir la categoría
-                <Categoria elegirCategoria={elegirCategoria} />
+                <Categoria cambiarPantalla={cambiarPantalla}/>
             )}
 
             {pantalla === 'trivia' && (
