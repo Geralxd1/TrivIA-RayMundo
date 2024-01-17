@@ -8,12 +8,37 @@ import Alternativas from '../components/Botones/Alternativas';
 import { postUsername, getUserId, postScore } from '../services/apiService';
 import ENDPOINTS from '../EndPoints/EndPoints';
 import ItemRanking from '../components/Ranking/ItemRanking';
+import Inicio from '../components/Inicio';
+import Ranking from '../components/Ranking/Ranking';
+import Nombre from '../components/Nombre';
+import Trivia from '../components/Trivia';
+import Respuesta from '../components/Dialogo/Respuesta';
 
 //Llamada a endpoints
 const Home = () => {
+    const [pantalla, setPantalla] = useState('inicio'); // Estado para controlar qué pantalla mostrar
+    const [nombreJugador, setNombreJugador] = useState('')
+    const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
+    // Función para cambiar de pantalla
+    const cambiarPantalla = (nuevaPantalla) => {
+        setPantalla(nuevaPantalla);
+    };
+
+    // Función para iniciar el juego
+    const iniciarJuego = (nombre) => {
+        console.log('esats en juego con nombre', nombre)
+        setNombreJugador(nombre)
+        guardarScore(0)
+        cambiarPantalla('trivia')
+        // Lógica para iniciar el juego con el nombre proporcionado
+        // Aquí podrías manejar el inicio del juego, cambiar la pantalla, etc.
+    };
+
+
+    ///
     const [game, setgame] = useState(false);
     const [triviaActiva, setTriviaActiva] = useState(false)
-    const [nombreJugador, setNombreJugador] = useState('')
+
     const [checked, setChecked] = React.useState(false);
     const [checkedHome, setCheckedHome] = React.useState(false);
     const [datosUsuario, setDatosUsuario] = useState({});
@@ -32,7 +57,31 @@ const Home = () => {
         setMostrarJuego(false);
         setMostrarRanking(true);
     };
+    // Para guardar el score
+    const guardarScore = (score) => {
+        sessionStorage.setItem('score', score.toString());
+    };
+
+    // Para obtener el score
+    const obtenerScore = () => {
+        const scoreString = sessionStorage.getItem('score');
+        return scoreString ? parseInt(scoreString, 10) : 0;
+    };
+
+    // Para actualizar el score
+    const actualizarScore = (puntos) => {
+        const scoreActual = obtenerScore();
+        const nuevoScore = scoreActual + puntos;
+        guardarScore(nuevoScore);
+    };
+
+    // Para borrar el score al finalizar la sesión
+    const reiniciarScore = () => {
+        sessionStorage.removeItem('score');
+    };
     const eleccionAlternativa = (alternativa) => {
+        actualizarScore(100)
+        console.log(sessionStorage.getItem('score'))
         switch (alternativa) {
             case 'a':
                 console.log('se clickeo a');
@@ -44,9 +93,8 @@ const Home = () => {
                 console.log('se clickeo c');
                 break;
             default:
-
-
         }
+        setMostrarRespuesta(true);
     }
     const handleUsernameSubmit = async () => {
         try {
@@ -110,154 +158,29 @@ const Home = () => {
                 alignItems: 'center',
                 overflow: 'hidden',
             }}>
-            {!mostrarJuego && !mostrarRanking&& !triviaActiva&& (
-                <Box component={'div'}>
-                    <Box
-                        component={'img'}
-                        src='/assets/LogoCompuesto.svg'
-                        sx={{ width: { xs: '50vh', md: '65vh' } }}
-                    />
-                    <Slide direction="up" in={checkedHome} mountOnEnter unmountOnExit>
-                        <Box component={'div'} sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', zIndex: '0' }}>
-                            <BotonPrincipal texto={'Jugar'} onClick={comenzarJuego} />
-                            <BotonPrincipal texto={'Ranking'} onClick={verRanking} />
-                        </Box>
-                    </Slide>
-                </Box>
-            )}
-            {mostrarJuego && (
-                <Box component={'div'}>
-                    <Box
-                        component={'img'}
-                        src='/assets/LogoCompuesto.svg'
-                        sx={{ width: { xs: '50vh', md: '65vh' } }}
-                    />
-                    <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
-                        <Box component={'form'}
-                            sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', zIndex: '0' }}>
-                            <CampoInput placeholder={'Escribe tu nombre aqui'} onChange={cambio} />
-                            <BotonPrincipal texto={'Guardar'} onClick={guardarName} />
-                            <BotonPrincipal texto={'Volver Atras'} onClick={VolverHome} />
-                        </Box>
-                    </Slide>
-                </Box>
+            {pantalla === 'inicio' && (
+                // Pantalla de inicio con botones para jugar y ver el ranking
+                <Inicio cambiarPantalla={cambiarPantalla} />
             )}
 
-            {mostrarRanking && (
-                <Box component={'div'} sx={{}}>
-                    <Box component={'div'}
-                        sx={{
-                            width: '90vw',
-                            position: 'absolute',
-                            top: { xs: '-1rem', md: '-1rem' },
-                            left: '5vw',
-                            display: 'flex',
-                            justifyContent: 'space-between'
-                        }}>
-                        <Box component={'img'}
-                            src='/assets/LogoCompuesto.svg'
-                            sx={{
-                                width: { xs: '6rem', md: '9rem' },
-                            }}
-                        />
-                        <Box component={'img'}
-                            src='/assets/ranking/titulo.svg'
-                            sx={{
-                                width: { xs: '15rem', md: '20rem' },
-                            }}
-                        />
-                        <Box component={'img'}
-                            src='/assets/ranking/estrellas.svg'
-                            sx={{
-                                width: { xs: '6rem', md: '9rem' },
-                                display: { xs: 'none', md: 'flex' }
-                            }}
-                        />
-                    </Box>
-                    <Paper
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '3rem 2rem',
-                            background: 'rgba(254,254,254, 0.67)',
-                            width: { xs: '90vw', md: '85vw' },
-                            borderRadius: '50px',
-                            height: { xs: '90vh', md: '85vh' },
-                            overflow: 'hidden', // Utilizamos 'hidden' para ocultar el desbordamiento del Paper
-                        }}
-                    >
-                        <Box
-                            sx={{ width: '100%' }}
-                            style={{
-                                overflowY: 'scroll', // Habilita el desbordamiento vertical solo para este contenedor
-                            }}
-                        >
-                            <ItemRanking puesto={1} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={2} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={3} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={4} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={5} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={1} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={2} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={3} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={4} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={5} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={1} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={2} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={3} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={4} nombre={'Geral'} puntaje={'10000'} />
-                            <ItemRanking puesto={5} nombre={'Geral'} puntaje={'10000'} />
-                        </Box>
-                    </Paper>
-                    <Box component={'div'}
-                        sx={{
-                            width: '90vw',
-                            position: 'absolute',
-                            bottom: { xs: '1rem', md: '2rem' },
-                            left: '5vw',
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }}>
-                        <BotonPrincipal texto={'VOLVER AL MENU'} onClick={VolverHome} />
-                    </Box>
-                </Box>
-            )
-            }
+            {pantalla === 'ranking' && (
+                // Pantalla de ranking
+                <Ranking cambiarPantalla={cambiarPantalla} />
+            )}
+            {pantalla === 'juego' && (
+                // Pantalla para ingresar el nombre y guardar
+                <Nombre cambiarPantalla={cambiarPantalla} iniciarJuego={iniciarJuego} />
+            )}
+            {pantalla === 'categoria' && (
+                // Pantalla para elegir la categoría
+                <Categoria elegirCategoria={elegirCategoria} />
+            )}
 
-
-            {
-                triviaActiva &&
-                <Box component={'div'}>
-                    <Box component={'img'}
-                        src='/assets/LogoCompuesto.svg'
-                        sx={{
-                            position: 'absolute',
-                            width: { xs: '6rem', md: '9rem' },
-                            top: { xs: '1vh', md: '3vh' },
-                            left: { xs: '1vw', md: '3vw' }
-                        }}
-                    />
-                    <Paper
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '2rem',
-                            background: 'rgba(254,254,254, 0.67)',
-                            width: { xs: '90vw', md: '85vw' },
-                            borderRadius: '50px',
-                            height: { xs: '90vh', md: '85vh' },
-                        }}>
-                        <TextoPregunta texto={'¿Cual destino turistico se encuentra en Puno?'} />
-                        <Alternativas texto={'Machu Picchu'} onClick={() => eleccionAlternativa('a')} />
-                        <Alternativas texto={'Lago Titicaca'} onClick={() => eleccionAlternativa('b')} />
-                        <Alternativas texto={'Cañon del Colca'} onClick={() => eleccionAlternativa('c')} />
-                    </Paper>
-                </Box>
-            }
+            {pantalla === 'trivia' && (
+                // Pantalla de trivia con pregunta, alternativas y resultados
+                <Trivia eleccionAlternativa={eleccionAlternativa} />
+            )}
+            {mostrarRespuesta && <Respuesta abrir={true} />}
         </Box >
     )
 }

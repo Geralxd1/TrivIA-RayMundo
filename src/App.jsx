@@ -11,8 +11,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Home/>
+      <CssBaseline />
+      <Home />
     </ThemeProvider>
   )
 }
