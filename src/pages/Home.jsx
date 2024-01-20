@@ -14,147 +14,41 @@ import Nombre from '../components/Nombre';
 import Trivia from '../components/Trivia';
 import Respuesta from '../components/Dialogo/Respuesta';
 import Categoria from '../components/Categoria';
+import Fin from '../components/Fin';
 
 //Llamada a endpoints
 const Home = () => {
     const [pantalla, setPantalla] = useState('inicio'); // Estado para controlar qué pantalla mostrar
     const [nombreJugador, setNombreJugador] = useState('')
     const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
+    const [estadoRespuesta, setEstadoRespuesta] = useState('')
+    const [ronda, setRonda] = useState(1);
     // Función para cambiar de pantalla
     const cambiarPantalla = (nuevaPantalla) => {
         setPantalla(nuevaPantalla);
     };
-
-    // Función para iniciar el juego
-    const iniciarJuego = (nombre) => {
-        console.log('esats en juego con nombre', nombre)
-        setNombreJugador(nombre)
-        guardarScore(0)
-        cambiarPantalla('categoria')
-        // Lógica para iniciar el juego con el nombre proporcionado
-        // Aquí podrías manejar el inicio del juego, cambiar la pantalla, etc.
-    };
-
-
-    ///
-    const [game, setgame] = useState(false);
-    const [triviaActiva, setTriviaActiva] = useState(false)
-
-    const [checked, setChecked] = React.useState(false);
-    const [checkedHome, setCheckedHome] = React.useState(false);
-    const [datosUsuario, setDatosUsuario] = useState({});
-    const [alternativaSeleccionada, setAlternativaSeleccionada] = useState('');
-
-    const [mostrarJuego, setMostrarJuego] = useState(false);
-    const [mostrarRanking, setMostrarRanking] = useState(false);
-
-    const comenzarJuego = () => {
-        setMostrarJuego(true);
-        setChecked(true);
-        setMostrarRanking(false);
-    };
-
-    const verRanking = () => {
-        setMostrarJuego(false);
-        setMostrarRanking(true);
-    };
-    // Para guardar el score
-    const guardarScore = (score) => {
-        sessionStorage.setItem('score', score.toString());
-    };
-
-    // Para obtener el score
-    const obtenerScore = () => {
-        const scoreString = sessionStorage.getItem('score');
-        return scoreString ? parseInt(scoreString, 10) : 0;
-    };
-
-    // Para actualizar el score
-    const actualizarScore = (puntos) => {
-        const scoreActual = obtenerScore();
-        const nuevoScore = scoreActual + puntos;
-        guardarScore(nuevoScore);
-    };
-
-    // Para borrar el score al finalizar la sesión
-    const reiniciarScore = () => {
-        sessionStorage.removeItem('score');
-    };
-
-    const preguntarDeNuevo = (algo) =>{
-        if(algo === 'next'){
-            cambiarPantalla('trivia')
-        }
+    //validar respeusta xde
+    const validarRespuestaExterno = (validacion) => {
+        console.log('puntaje en home', localStorage.getItem('score'))
+        setEstadoRespuesta(validacion)
+        cambiarPantalla('mensajeRespuesta')
     }
-    const eleccionAlternativa = (alternativa) => {
-        actualizarScore(100)
-        console.log(sessionStorage.getItem('score'))
-        switch (alternativa) {
-            case 'a':
-                console.log('se clickeo a');
-                break;
-            case 'b':
-                console.log('se clickeo b');
-                break;
-            case 'c':
-                console.log('se clickeo c');
-                break;
-            case '':
-                console.log('no se envio nada');
-                break;
-            default:
-        }
-        setMostrarRespuesta(true);
-    }
-    const handleUsernameSubmit = async () => {
-        try {
-            // Llamando a postUsername para enviar el nombre de usuario
-            const result = await postUsername(nombreJugador);
-            setDatosUsuario(result)
-            console.log('Resultado de postUsername:', result);
-        } catch (error) {
-            console.error('Error al enviar el nombre de usuario desde el componente:', error);
-        }
-    };
-    useEffect(() => {
-        // Este bloque de código se ejecutará cada vez que se actualice el estado datosUsuario
-        console.log('Estado actualizado de datosUsuario:', datosUsuario);
-    }, [datosUsuario]);
-    //Clcik en boton Jugar
-    const clickJugar = () => {
-        setChecked(true)
-        setgame(true)
-
-    };
-    //Click en  boton ranking
-    const clickRanking = () => {
-        console.log('Se hizo clic en el botón ranking');
-        // Aquí puedes realizar otras acciones al hacer clic en el botón
-    };
-    //Click en  boton guardar
-    const guardarName = () => {
-        sessionStorage.setItem('nombreJugador', nombreJugador)
-        console.log('Formulario enviado con nombre', nombreJugador);
-        handleUsernameSubmit()
-        setMostrarJuego(false);
-        setMostrarRanking(false);
-        setTriviaActiva(true)
-        console.log(sessionStorage.getItem('nombreJugador'))
-    };
-    const VolverHome = () => {
-        setMostrarJuego(false);
-        setMostrarRanking(false);
-        setCheckedHome(true)
-    };
-    const cambio = (event) => {
-        event.preventDefault();
-        const nombre = event.target.value
-        setNombreJugador(nombre)
+    //This is para contar rondas
+    const continuar = () => {
+        setRonda(ronda + 1);
+        cambiarPantalla('trivia')
     };
 
     useEffect(() => {
-        setCheckedHome(true)
-    }, []);
+        if(ronda===6){
+            cambiarPantalla('fin')
+        }
+    }, [ronda]);
+
+    //este pa reiniciar juego, si pasa :v
+    const reiniciar = () =>{
+        setRonda(1);
+    }
     return (
         <Box
             sx={{
@@ -172,25 +66,28 @@ const Home = () => {
                 // Pantalla de inicio con botones para jugar y ver el ranking
                 <Inicio cambiarPantalla={cambiarPantalla} />
             )}
-
             {pantalla === 'ranking' && (
                 // Pantalla de ranking
                 <Ranking cambiarPantalla={cambiarPantalla} />
             )}
-            {pantalla === 'juego' && (
+            {pantalla === 'ingresarNombre' && (
                 // Pantalla para ingresar el nombre y guardar
-                <Nombre cambiarPantalla={cambiarPantalla} iniciarJuego={iniciarJuego} />
+                <Nombre cambiarPantalla={cambiarPantalla} />
             )}
-            {pantalla === 'categoria' && (
+            {pantalla === 'elegirCategoria' && (
                 // Pantalla para elegir la categoría
-                <Categoria cambiarPantalla={cambiarPantalla}/>
+                <Categoria cambiarPantalla={cambiarPantalla} />
             )}
-
             {pantalla === 'trivia' && (
-                // Pantalla de trivia con pregunta, alternativas y resultados
-                <Trivia eleccionAlternativa={eleccionAlternativa} />
+                // Pantalla de trivia con pregunta y alternativas
+                <Trivia validarRespuestaExterno={validarRespuestaExterno} />
             )}
-            {mostrarRespuesta && <Respuesta abrir={true} estado={'Correcta'} onClick={preguntarDeNuevo} />}
+            {pantalla === 'mensajeRespuesta' && (
+                <Respuesta estado={estadoRespuesta} continuar={continuar} />
+            )}
+            {pantalla === 'fin' && (
+                <Fin/>
+            )}
         </Box >
     )
 }

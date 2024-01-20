@@ -3,9 +3,20 @@ import React, { useEffect, useState } from 'react'
 import CampoInput from './CamposTexto/CampoInput'
 import BotonPrincipal from './Botones/BotonPrincipal'
 
-const Nombre = ({ cambiarPantalla, iniciarJuego }) => {
+const Nombre = ({ cambiarPantalla }) => {
     const [nombre, setNombre] = useState('');
     const [checked, setChecked] = useState(false);
+
+    function guardarNombre(){
+        //haremos una llamada a la api para guardar el nombre
+
+        //se almacena localmente el nombre de jugador y se inica el score en 0 
+        localStorage.setItem('nombreJugador', nombre);
+        localStorage.setItem('score', 0);
+
+        //cambiamos pantalla a elegir categoria
+        cambiarPantalla('elegirCategoria')
+    }
     useEffect(() => {
         setChecked(true)
     }, []);
@@ -20,7 +31,7 @@ const Nombre = ({ cambiarPantalla, iniciarJuego }) => {
                 <Box component={'form'}
                     sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', zIndex: '0' }}>
                     <CampoInput placeholder={'Escribe tu nombre aqui'} onChange={(e) => setNombre(e.target.value)} />
-                    <BotonPrincipal texto={'Guardar'} onClick={() => iniciarJuego(nombre)} />
+                    <BotonPrincipal texto={'Guardar'} onClick={()=> guardarNombre()} />
                     <BotonPrincipal texto={'Volver Atras'} onClick={() => cambiarPantalla('inicio')} />
                 </Box>
             </Slide>

@@ -1,57 +1,114 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import lugares from "../../assets/Lugares.json"
-import { Box } from '@mui/material';
+import { Box, Paper, Slide, Typography } from '@mui/material';
+import Alternativas from '../Botones/Alternativas';
+import BotonPrincipal from '../Botones/BotonPrincipal';
 
-const Respuesta = ({ abrir, estado, onClick }) => {
-    const [open, setOpen] = useState(false);
+const Respuesta = ({ estado, continuar }) => {
+    const [checked, setChecked] = useState(false);
     const [lugar, setLugar] = useState('');
     const [datosLugar, setDatosLugar] = useState({});
 
-
     useEffect(() => {
-        if (abrir) {
-            setOpen(true);
-        }
-    }, [abrir]);
-
-    const handleClose = () => {
-        setOpen(false);
-    };
+        setLugar('puno')
+        setChecked(true)
+    }, []);
 
     return (
-        <Dialog
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-        >
-            <DialogTitle id="alert-dialog-title">Tu respuesta fue: {estado}</DialogTitle>
-            <DialogContent>
-                <DialogContentText id="alert-dialog-description">
-                    {lugares["Cataratas de Gocta"].info}
+        <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+            <Box component={'div'}>
+                <Box component={'div'}
+                    sx={{
+                        width: '90vw',
+                        position: 'absolute',
+                        top: { xs: '-1rem', md: '-1rem' },
+                        left: '5vw',
+                        display: 'flex',
+                        justifyContent: 'space-between'
+                    }}>
                     <Box component={'img'}
-                        src={lugares["Cataratas de Gocta"].url}
+                        src='/assets/LogoCompuesto.svg'
                         sx={{
-                            width:'100%',
-                            border:'2px solid black',
-                            marginTop:'1rem'
+                            width: { xs: '6rem', md: '9rem' },
                         }}
                     />
-                </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={() => {setOpen(false),onClick('next')}} autoFocus endIcon={<NavigateNextIcon />}>
-                    Continuar
-                </Button>
-            </DialogActions>
-        </Dialog>
+                    <Box component={'div'} sx={{ position: 'relative', top: '1rem' }}>
+                        <Box component={'img'}
+                            src='/assets/preguntas/score.svg'
+                            sx={{
+                                width: { xs: '8rem', md: '12rem' },
+                            }}
+                        />
+                        <Box component={'span'}
+                            sx={{
+                                position: 'absolute',
+                                top: { xs: '1.75rem', md: '2.75rem' },
+                                left: { xs: '2.75rem', md: '4rem' },
+                                color: '#ffffff',
+                                WebkitTextStrokeWidth: '1px',
+                                WebkitTextStrokeColor: 'black',
+                                fontSize: { xs: '1.65rem', md: '2rem' }
+                            }}>
+                            {localStorage.getItem('score')}
+                        </Box>
+                    </Box>
+                </Box>
+                <Paper
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '1.5rem 2rem',
+                        background: 'rgba(254,254,254, 0.67)',
+                        width: { xs: '90vw', md: '85vw' },
+                        borderRadius: '50px',
+                        height: { xs: '90vh', md: '85vh' },
+                    }}
+                >
+                    <Box component={'span'}
+                        sx={{
+                            fontSize: { xs: '4rem', md: '6rem' },
+                            lineHeight: 'normal',
+                            color: '#26bf00',
+                            WebkitTextStrokeWidth: '1px',
+                            WebkitTextStrokeColor: '#fee868',
+                        }}
+                    >¡{estado.toUpperCase()}!</Box>
+                    <Alternativas texto={lugar} />
+                    <Box component={'div'}
+                        sx={{
+                            display: 'flex',
+                            flexDirection: { xs: 'column', md: 'row' },
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
+                        <Paper
+                            sx={{
+                                backgroundColor: '#ffde59',
+                                padding: '1rem',
+                                marginRight: '1rem',
+                            }}>
+                            <Typography variant='h5'>
+                                {lugares["Cataratas de Gocta"].info}
+                            </Typography>
+                        </Paper>
+                        <Box component={'img'}
+                            src={lugares["Cataratas de Gocta"].url}
+                            sx={{
+                                width: { xs: '80%', md: '30%' },
+                                border: '2px solid black',
+                                marginTop: '1rem'
+                            }} />
+                    </Box>
+                    <BotonPrincipal texto={'Continuar'} onClick={() => continuar()} />
+                </Paper>
+            </Box>
+
+        </Slide>
+
     );
 };
 

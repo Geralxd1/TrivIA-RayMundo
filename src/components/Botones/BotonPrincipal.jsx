@@ -13,8 +13,9 @@ const BotonPrincipal = ({ texto, onClick  }) => {
                 width: {xs:'80vw', md:'25vw'},
                 border: '1px solid black',
                 borderBottomWidth: '0.2rem',
-                paddingY:'0px',
+                paddingY:'5px',
                 marginY:'.25rem',
+                lineHeight:'normal',
                 '&:hover': {
                     backgroundColor: '#E5AF00',
                     translate: '0 .1rem',

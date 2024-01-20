@@ -16,7 +16,7 @@ const Inicio = ({ cambiarPantalla }) => {
             />
             <Slide direction="up" in={checkedHome} mountOnEnter unmountOnExit>
                 <Box component={'div'} sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', zIndex: '0' }}>
-                    <BotonPrincipal texto={'Jugar'} onClick={() => cambiarPantalla('juego')} />
+                    <BotonPrincipal texto={'Jugar'} onClick={() => cambiarPantalla('ingresarNombre')} />
                     <BotonPrincipal texto={'Ranking'} onClick={() => cambiarPantalla('ranking')} />
                 </Box>
             </Slide>

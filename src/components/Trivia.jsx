@@ -3,54 +3,79 @@ import React, { useEffect, useState } from 'react'
 import TextoPregunta from './Textos/TextoPregunta'
 import Alternativas from './Botones/Alternativas'
 
-const Trivia = ({ eleccionAlternativa }) => {
-    const [tiempoRestante, setTiempoRestante] = useState(30);
-    const [eleccionRealizada, setEleccionRealizada] = useState(false);
-    
-    const obtenerScore = () => {
-        // Lógica para obtener el score desde sessionStorage
-        return sessionStorage.getItem('score') || 0; // Puedes ajustar según tu estructura de datos
+const Trivia = ({ validarRespuestaExterno }) => {
+    const [seconds, setSeconds] = useState(30);
+    const [pregunta, setPregunta] = useState('');
+    const [variablePregunta, setVariablePregunta] = useState('');
+    const [alternativa1, setAlternativa1] = useState('');
+    const [alternativa2, setAlternativa2] = useState('');
+    const [alternativa3, setAlternativa3] = useState('');
+    const [alternativas, setAlternativas] = useState(['', '', '']);
+    const [respuestCorrecta, setRespuestaCorrecta] = useState('');
+    // Se obtiene los datos de pregunta y respuesats de la api y se asignan supongo xde
+
+    function obtenerDatos() {
+        //por mientras 
+        setAlternativa1('Puno');
+        setAlternativa2('Lima');
+        setAlternativa3('Cuzco');
+
     }
-    const [score, setScore] = useState(obtenerScore());
-    useEffect(() => {
-        const scoreChangeListener = (event) => {
-            if (event.key === 'score') {
-                // Cuando hay un cambio en el almacenamiento, obtén los datos actualizados y actualiza el estado
-                setScore(obtenerScore());
-            }
-        };
-
-        // Agregar un event listener para detectar cambios en sessionStorage
-        window.addEventListener('storage', scoreChangeListener);
-
-        // Limpiar el event listener al desmontar el componente
-        return () => {
-            window.removeEventListener('storage', scoreChangeListener);
-        };
-    }, []);
-
-    // Función para obtener el score desde sessionStorage
-
-    useEffect(() => {
-        const temporizador = setInterval(() => {
-            setTiempoRestante((prevTiempo) => (prevTiempo > 0 ? prevTiempo - 1 : 0));
-        }, 1000);
-
-        return () => clearInterval(temporizador);
-    }, []);
-
-    const handleEleccion = (alternativa) => {
-        if (!eleccionRealizada) {
-            setEleccionRealizada(true);
-            clearInterval(temporizador);
-            eleccionAlternativa(alternativa);
+    // dar la pregunta segun la categoria ps
+    function asignarPregunta() {
+        setVariablePregunta('Lago Titicaca')
+        //obtenemos categoria
+        const categoria = localStorage.getItem('categoria');
+        switch (categoria) {
+            case 'destinosTuristicos':
+                setPregunta(`¿En que departamento del Peru se encuentra ${variablePregunta}?`)
+                break;
+            case 'platosTipicos':
+                setPregunta(`¿De que Departamento del Peru es natural ${variablePregunta}?`)
+                break;
+            case 'cambinacion':
+                //implemntar logica de combinacion de llamada a os apis de forma
+                break;
         }
+    }
+
+    //validar respuesta
+    function validarRespuestaInterno(alternativa) {
+        //se reconoce a la correcta y si coincide devolvemos bein sino ps no :v
+        const puntajeActual = parseInt(localStorage.getItem('score')) 
+        console.log('puntaje antes', puntajeActual)
+        if(alternativa === 'Puno'){
+            localStorage.setItem('score', puntajeActual+100)
+            validarRespuestaExterno('correcto')
+        }
+        else{
+            validarRespuestaExterno('incorrecto')
+        }
+    }
+    //barajar alternativas
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     };
     useEffect(() => {
-        if (tiempoRestante === 0 && !eleccionRealizada) {
-            eleccionAlternativa(''); // Envía un valor vacío si no se hizo elección
-        }
-    }, [tiempoRestante, eleccionRealizada, eleccionAlternativa]);
+        obtenerDatos();
+        asignarPregunta();
+        // Mezclar las alternativas al montar el componente
+        const shuffledAlternativas = shuffleArray([...alternativas]);
+        setAlternativas(shuffledAlternativas);
+        //Temporizador
+        const intervalId = setInterval(() => {
+            setSeconds(prevSeconds => (prevSeconds > 0 ? prevSeconds - 1 : 0));
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+    useEffect(() => {
+        setAlternativas(shuffleArray([alternativa1, alternativa2, alternativa3]));
+    }, [alternativa1, alternativa2, alternativa3]);
     return (
         <Box component={'div'}>
             <Box component={'div'}
@@ -85,7 +110,7 @@ const Trivia = ({ eleccionAlternativa }) => {
                             WebkitTextStrokeColor: 'black',
                             fontSize: { xs: '1.65rem', md: '2rem' }
                         }}>
-                        {tiempoRestante < 10 ? `00:0${tiempoRestante}` : `00:${tiempoRestante}`}
+                        {seconds} sg
                     </Box>
                 </Box>
                 <Box component={'div'} sx={{ position: 'relative', top: '1rem', display: { xs: 'none', md: 'block' } }}>
@@ -105,7 +130,7 @@ const Trivia = ({ eleccionAlternativa }) => {
                             WebkitTextStrokeColor: 'black',
                             fontSize: '2rem'
                         }}>
-                        {sessionStorage.getItem('score')}
+                        {localStorage.getItem('score')}
                     </Box>
                 </Box>
             </Box>
@@ -126,7 +151,7 @@ const Trivia = ({ eleccionAlternativa }) => {
                         WebkitTextStrokeColor: 'black',
                         fontSize: '1.75rem'
                     }}>
-                    {sessionStorage.getItem('score')}
+                    {localStorage.getItem('score')}
                 </Box>
             </Box>
             <Paper
@@ -141,10 +166,10 @@ const Trivia = ({ eleccionAlternativa }) => {
                     borderRadius: '50px',
                     height: { xs: '90vh', md: '85vh' },
                 }}>
-                <TextoPregunta texto={'¿Cual destino turistico se encuentra en Amazonas?'} />
-                <Alternativas texto={'Machu Picchu'} onClick={() => eleccionAlternativa('a')} />
-                <Alternativas texto={'Lago Titicaca'} onClick={() => eleccionAlternativa('b')} />
-                <Alternativas texto={'Cataratas de Gocta'} onClick={() => eleccionAlternativa('c')} />
+                <TextoPregunta texto={pregunta} />
+                {alternativas.map((alternativa, index) => (
+                    <Alternativas key={index} texto={alternativa} onClick={() => validarRespuestaInterno(alternativa)} />
+                ))}
             </Paper>
         </Box>
     )
