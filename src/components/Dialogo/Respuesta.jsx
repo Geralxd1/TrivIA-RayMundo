@@ -70,7 +70,7 @@ const Respuesta = ({ estado, continuar }) => {
                 >
                     <Box component={'span'}
                         sx={{
-                            fontSize: { xs: '4rem', md: '6rem' },
+                            fontSize: { xs: '3rem', md: '6rem' },
                             lineHeight: 'normal',
                             color: '#26bf00',
                             WebkitTextStrokeWidth: '1px',
@@ -83,15 +83,19 @@ const Respuesta = ({ estado, continuar }) => {
                             display: 'flex',
                             flexDirection: { xs: 'column', md: 'row' },
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
                         }}>
                         <Paper
                             sx={{
                                 backgroundColor: '#ffde59',
                                 padding: '1rem',
                                 marginRight: '1rem',
+                                width:'100%'
                             }}>
-                            <Typography variant='h5'>
+                            <Typography variant='body' sx={{display:{xs:'flex', md:'none'}}}>
+                                {lugares["Cataratas de Gocta"].info}
+                            </Typography>
+                            <Typography variant='h5' sx={{display:{xs:'none', md:'flex'}}}>
                                 {lugares["Cataratas de Gocta"].info}
                             </Typography>
                         </Paper>

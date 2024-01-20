@@ -35,13 +35,14 @@ const Home = () => {
     }
     //This is para contar rondas
     const continuar = () => {
-        setRonda(ronda + 1);
-        cambiarPantalla('trivia')
+        console.log(ronda)
+        setRonda(prevRonda => prevRonda + 1);
+        cambiarPantalla('trivia');
     };
 
     useEffect(() => {
-        if(ronda===6){
-            cambiarPantalla('fin')
+        if (ronda >= 6) {
+            cambiarPantalla('fin');
         }
     }, [ronda]);
 
@@ -86,7 +87,7 @@ const Home = () => {
                 <Respuesta estado={estadoRespuesta} continuar={continuar} />
             )}
             {pantalla === 'fin' && (
-                <Fin/>
+                <Fin cambiarPantalla={cambiarPantalla} reiniciar={reiniciar}/>
             )}
         </Box >
     )

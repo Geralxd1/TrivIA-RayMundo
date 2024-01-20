@@ -42,7 +42,7 @@ const ItemRanking = ({ puesto, nombre, puntaje }) => {
                     alignItems: 'center',
                     height: '2.5rem',
                     borderRadius: '5px',
-                    paddingX: '.75rem',
+                    paddingX: {xs:'.2rem',md:'.75rem'},
                     position: 'absolute',
                     right: { xs: '.75rem', md: '3rem' },
                 }}
@@ -52,7 +52,7 @@ const ItemRanking = ({ puesto, nombre, puntaje }) => {
                     src='/assets/ranking/coin.svg'
                     sx={{
                         width: '1.85rem',
-                        marginRight: '1rem',
+                        marginRight: {xs:'.2rem',md:'1rem'},
                     }}
                 />
                 {puntaje}

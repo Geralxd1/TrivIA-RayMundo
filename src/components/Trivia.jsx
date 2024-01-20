@@ -4,6 +4,7 @@ import TextoPregunta from './Textos/TextoPregunta'
 import Alternativas from './Botones/Alternativas'
 
 const Trivia = ({ validarRespuestaExterno }) => {
+    const [respondido, setRespondido] = useState(false);
     const [seconds, setSeconds] = useState(30);
     const [pregunta, setPregunta] = useState('');
     const [variablePregunta, setVariablePregunta] = useState('');
@@ -41,17 +42,23 @@ const Trivia = ({ validarRespuestaExterno }) => {
 
     //validar respuesta
     function validarRespuestaInterno(alternativa) {
-        //se reconoce a la correcta y si coincide devolvemos bein sino ps no :v
-        const puntajeActual = parseInt(localStorage.getItem('score')) 
-        console.log('puntaje antes', puntajeActual)
-        if(alternativa === 'Puno'){
-            localStorage.setItem('score', puntajeActual+100)
-            validarRespuestaExterno('correcto')
-        }
-        else{
-            validarRespuestaExterno('incorrecto')
+        // Verifica si ya se ha respondido
+        if (!respondido) {
+            // Marca como respondido
+            setRespondido(true);
+
+            const puntajeActual = parseInt(localStorage.getItem('score')) || 0;
+            console.log('puntaje antes', puntajeActual);
+
+            if (alternativa === 'Puno') {
+                localStorage.setItem('score', puntajeActual + 100);
+                validarRespuestaExterno('correcto');
+            } else {
+                validarRespuestaExterno('incorrecto');
+            }
         }
     }
+
     //barajar alternativas
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -63,16 +70,30 @@ const Trivia = ({ validarRespuestaExterno }) => {
     useEffect(() => {
         obtenerDatos();
         asignarPregunta();
+
         // Mezclar las alternativas al montar el componente
-        const shuffledAlternativas = shuffleArray([...alternativas]);
+        const shuffledAlternativas = shuffleArray([alternativa1, alternativa2, alternativa3]);
         setAlternativas(shuffledAlternativas);
-        //Temporizador
+
+        // Temporizador
         const intervalId = setInterval(() => {
-            setSeconds(prevSeconds => (prevSeconds > 0 ? prevSeconds - 1 : 0));
+            setSeconds((prevSeconds) => {
+                if (prevSeconds > 0) {
+                    return prevSeconds - 1;
+                } else {
+                    // Si el tiempo se agota y no se ha respondido, marcar como respondido e enviar 'incorrecto'
+                    if (!respondido) {
+                        setRespondido(true);
+                        validarRespuestaExterno('incorrecto');
+                    }
+                    return 0;
+                }
+            });
         }, 1000);
 
         return () => clearInterval(intervalId);
-    }, []);
+    }, [respondido]);
+
     useEffect(() => {
         setAlternativas(shuffleArray([alternativa1, alternativa2, alternativa3]));
     }, [alternativa1, alternativa2, alternativa3]);

@@ -2,11 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Box, Paper, Slide, Typography } from '@mui/material';
 import BotonPrincipal from './Botones/BotonPrincipal';
 
-const Fin = () => {
+const Fin = ({cambiarPantalla, reiniciar}) => {
     const [checked, setChecked] = useState(false);
     const [nombre, setNombre] = useState('');
     const [score, setScore] = useState('');
 
+    function removerDatos(){
+        localStorage.removeItem('nombreUsuario');
+        localStorage.removeItem('score');
+        localStorage.removeItem('categoria');
+        reiniciar();
+    }
     useEffect(() => {
         setNombre(localStorage.getItem('nombreJugador'))
         setScore(localStorage.getItem('score'))
@@ -52,7 +58,7 @@ const Fin = () => {
                             color: '#26bf00',
                             WebkitTextStrokeWidth: '1px',
                             WebkitTextStrokeColor: '#fee868',
-                            textAlign:'center'
+                            textAlign: 'center'
                         }}
                     >¡Felicidades, {nombre}!</Box>
 
@@ -76,21 +82,21 @@ const Fin = () => {
                             }}>
                             {score} <br />
                         </Box>
-                        
+
                         ¡Eres un verdadero genio! 🌟<br />
                         Gracias por jugar y aprender con nosotros. ¡Esperamos verte de nuevo pronto!
                     </Box>
                     <Box component={'div'}
-                    sx={{
-                        width:'100%',
-                        display:'flex',
-                        justifyContent:'space-around',
-                        alignItems:'center',
-                        marginTop:'1.5rem',
-                        flexDirection:{xs:'column', md:'row'}
-                    }}>
-                            <BotonPrincipal texto={'Ver Ranking'}/>
-                            <BotonPrincipal texto={'Ir a inicio'}/>
+                        sx={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'space-around',
+                            alignItems: 'center',
+                            marginTop: '1.5rem',
+                            flexDirection: { xs: 'column', md: 'row' }
+                        }}>
+                        <BotonPrincipal texto={'Ver Ranking'} onClick={() => {removerDatos();cambiarPantalla('ranking')}} />
+                        <BotonPrincipal texto={'Ir a inicio'} onClick={() => {removerDatos();cambiarPantalla('inicio')}} />
                     </Box>
                 </Paper>
             </Box>
