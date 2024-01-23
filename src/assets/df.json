@@ -1,0 +1,70 @@
+{
+    "Cataratas de Gocta": {
+        "info": "Las Cataratas de Gocta son una maravilla natural ubicada en la región de Amazonas, Perú. Con una altura de 771 metros, es una de las cataratas más altas del mundo.",
+        "url": "https://elcomercio.pe/resizer/KcORZjBUB-EybRt9PhlSfQaF9e8=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/R7GHWBWV75GV3FLGFDSKQJIQVE.jpg"
+    },
+    "Caverna De Quiocta": {
+        "info": "La Caverna De Quiocta es una impresionante cueva ubicada en la provincia de Bongará, Amazonas. Con impresionantes formaciones de estalactitas y estalagmitas, es un destino espeleológico fascinante.",
+        "url": "https://ejemplo.com/caverna-de-quiocta"
+    },
+    "Complejo Arqueológico de Kuélap": {
+        "info": "Situado en la región de Amazonas, Perú, el Complejo Arqueológico de Kuélap destaca por sus estructuras de piedra y ofrece vistas impresionantes desde lo alto de la montaña.",
+        "url": "https://ejemplo.com/complejo-arqueologico-de-kuelap"
+    },
+    "Museo de Leymebamba": {
+        "info": "Ubicado en Leymebamba, Amazonas, Perú, el Museo alberga momias y artefactos funerarios Chachapoyas, ofreciendo una visión única de la cultura ancestral de la región.",
+        "url": "https://ejemplo.com/museo-de-leymebamba"
+    },
+    "Sitio Arqueológico de Karajía": {
+        "info": "Enclavado en los Andes de Amazonas, Perú, el Sitio Arqueológico de Karajía presenta 'purunmachus', estatuas funerarias únicas en acantilados de difícil acceso.",
+        "url": "https://ejemplo.com/sitio-arqueologico-de-karajia"
+    },
+    "Sitio arqueológico Revash": {
+        "info": "Ubicado en la región de Amazonas, Perú, el Sitio Arqueológico de Revash exhibe mausoleos decorados, revelando prácticas funerarias fascinantes de la civilización Chachapoyas.",
+        "url": "https://ejemplo.com/sitio-arqueologico-revash"
+    },
+    "Monumento Arqueológico Chavín de Huántar": {
+        "info": "El Monumento Arqueológico Chavín de Huántar, en los Andes peruanos, es un centro religioso con esculturas impresionantes que reflejan la influencia espiritual de la época.",
+        "url": "https://ejemplo.com/monumento-arqueologico-chavin-de-huantar"
+    },
+    "Monumento Arqueológico De Willkawain": {
+        "info": "Ubicado en Ancash, Perú, el Monumento Arqueológico De Willkawain presenta estructuras preincaicas con detalles artísticos. Ofrece una visión fascinante de la historia regional.",
+        "url": "https://ejemplo.com/monumento-arqueologico-de-willkawain"
+    },
+    "Museo Arqueológico De Ancash 'Agusto Soriano Infante'": {
+        "info": "El Museo Arqueológico De Ancash en Huaraz, Perú, resguarda artefactos preincaicos y momias. Un tesoro cultural que revela la riqueza arqueológica de la región.",
+        "url": "https://ejemplo.com/museo-arqueologico-de-ancash-agusto-soriano-infante"
+    },
+    "Museo Regional De Casma 'Max Uhle'": {
+        "info": "En Casma, Ancash, Perú, el Museo Regional 'Max Uhle' exhibe arte preincaico y ofrece una ventana al pasado. Un lugar imperdible para los amantes de la arqueología.",
+        "url": "https://ejemplo.com/museo-regional-de-casma-max-uhle"
+    },
+    "Parque Nacional Huascarán": {
+        "info": "El Parque Nacional Huascarán, en Ancash, Perú, alberga la cordillera tropical más alta del mundo. Un paraíso natural con picos nevados, lagunas y biodiversidad excepcional.",
+        "url": "https://ejemplo.com/parque-nacional-huascaran"
+    },
+    "Conjunto Arqueológico de Saywite": {
+        "info": "En la provincia de Abancay, Apurímac, Perú, el Conjunto Arqueológico de Saywite destaca por su monolito grabado. Un sitio misterioso con significado arqueoastronómico.",
+        "url": "https://ejemplo.com/conjunto-arqueologico-de-saywite"
+    },
+    "Museo Arqueológico Antropológico de Apurímac": {
+        "info": "Ubicado en Abancay, Apurímac, Perú, el Museo Arqueológico Antropológico resguarda vestigios culturales que revelan la rica historia de la región.",
+        "url": "https://ejemplo.com/museo-arqueologico-antropologico-de-apurimac"
+    },
+    "Santuario Nacional de Ampay": {
+        "info": "El Santuario Nacional de Ampay, en Abancay, Apurímac, Perú, ofrece paisajes de montaña y una diversidad biológica única. Un refugio natural para la fauna y flora.",
+        "url": "https://ejemplo.com/santuario-nacional-de-ampay"
+    },
+    "Monasterio de Santa Catalina": {
+        "info": "El Monasterio de Santa Catalina, en Arequipa, Perú, es una joya colonial que presenta arquitectura y arte religioso. Un oasis de paz en el corazón de la ciudad.",
+        "url": "https://ejemplo.com/monasterio-de-santa-catalina"
+    },
+    "Reserva Nacional de Salinas y Aguada Blanca": {
+        "info": "La Reserva Nacional de Salinas y Aguada Blanca, en Arequipa y Moquegua, Perú, resguarda paisajes altiplánicos, fauna andina y lagunas escénicas.",
+        "url": "https://ejemplo.com/reserva-nacional-de-salinas-y-aguada-blanca"
+    },
+    "Reserva Paisajística Sub Cuenca del Cotahuasi": {
+        "info": "La Reserva Paisajística Sub Cuenca del Cotahuasi, en Arequipa, Perú, ofrece cañones profundos y paisajes impresionantes. Un tesoro natural para los amantes del trekking.",
+        "url": "https://ejemplo.com/reserva-paisajistica-sub-cuenca-del-cotahuasi"
+    }
+}

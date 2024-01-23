@@ -1,70 +1,494 @@
 {
-    "Cataratas de Gocta": {
-        "info": "Las Cataratas de Gocta son una maravilla natural ubicada en la región de Amazonas, Perú. Con una altura de 771 metros, es una de las cataratas más altas del mundo.",
-        "url": "https://elcomercio.pe/resizer/KcORZjBUB-EybRt9PhlSfQaF9e8=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/R7GHWBWV75GV3FLGFDSKQJIQVE.jpg"
-    },
-    "Caverna De Quiocta": {
-        "info": "La Caverna De Quiocta es una impresionante cueva ubicada en la provincia de Bongará, Amazonas. Con impresionantes formaciones de estalactitas y estalagmitas, es un destino espeleológico fascinante.",
-        "url": "https://ejemplo.com/caverna-de-quiocta"
-    },
-    "Complejo Arqueológico de Kuélap": {
-        "info": "Situado en la región de Amazonas, Perú, el Complejo Arqueológico de Kuélap destaca por sus estructuras de piedra y ofrece vistas impresionantes desde lo alto de la montaña.",
-        "url": "https://ejemplo.com/complejo-arqueologico-de-kuelap"
-    },
-    "Museo de Leymebamba": {
-        "info": "Ubicado en Leymebamba, Amazonas, Perú, el Museo alberga momias y artefactos funerarios Chachapoyas, ofreciendo una visión única de la cultura ancestral de la región.",
-        "url": "https://ejemplo.com/museo-de-leymebamba"
-    },
-    "Sitio Arqueológico de Karajía": {
-        "info": "Enclavado en los Andes de Amazonas, Perú, el Sitio Arqueológico de Karajía presenta 'purunmachus', estatuas funerarias únicas en acantilados de difícil acceso.",
-        "url": "https://ejemplo.com/sitio-arqueologico-de-karajia"
-    },
-    "Sitio arqueológico Revash": {
-        "info": "Ubicado en la región de Amazonas, Perú, el Sitio Arqueológico de Revash exhibe mausoleos decorados, revelando prácticas funerarias fascinantes de la civilización Chachapoyas.",
-        "url": "https://ejemplo.com/sitio-arqueologico-revash"
-    },
-    "Monumento Arqueológico Chavín de Huántar": {
-        "info": "El Monumento Arqueológico Chavín de Huántar, en los Andes peruanos, es un centro religioso con esculturas impresionantes que reflejan la influencia espiritual de la época.",
-        "url": "https://ejemplo.com/monumento-arqueologico-chavin-de-huantar"
-    },
-    "Monumento Arqueológico De Willkawain": {
-        "info": "Ubicado en Ancash, Perú, el Monumento Arqueológico De Willkawain presenta estructuras preincaicas con detalles artísticos. Ofrece una visión fascinante de la historia regional.",
-        "url": "https://ejemplo.com/monumento-arqueologico-de-willkawain"
-    },
-    "Museo Arqueológico De Ancash 'Agusto Soriano Infante'": {
-        "info": "El Museo Arqueológico De Ancash en Huaraz, Perú, resguarda artefactos preincaicos y momias. Un tesoro cultural que revela la riqueza arqueológica de la región.",
-        "url": "https://ejemplo.com/museo-arqueologico-de-ancash-agusto-soriano-infante"
-    },
-    "Museo Regional De Casma 'Max Uhle'": {
-        "info": "En Casma, Ancash, Perú, el Museo Regional 'Max Uhle' exhibe arte preincaico y ofrece una ventana al pasado. Un lugar imperdible para los amantes de la arqueología.",
-        "url": "https://ejemplo.com/museo-regional-de-casma-max-uhle"
-    },
-    "Parque Nacional Huascarán": {
-        "info": "El Parque Nacional Huascarán, en Ancash, Perú, alberga la cordillera tropical más alta del mundo. Un paraíso natural con picos nevados, lagunas y biodiversidad excepcional.",
-        "url": "https://ejemplo.com/parque-nacional-huascaran"
-    },
-    "Conjunto Arqueológico de Saywite": {
-        "info": "En la provincia de Abancay, Apurímac, Perú, el Conjunto Arqueológico de Saywite destaca por su monolito grabado. Un sitio misterioso con significado arqueoastronómico.",
-        "url": "https://ejemplo.com/conjunto-arqueologico-de-saywite"
-    },
-    "Museo Arqueológico Antropológico de Apurímac": {
-        "info": "Ubicado en Abancay, Apurímac, Perú, el Museo Arqueológico Antropológico resguarda vestigios culturales que revelan la rica historia de la región.",
-        "url": "https://ejemplo.com/museo-arqueologico-antropologico-de-apurimac"
-    },
-    "Santuario Nacional de Ampay": {
-        "info": "El Santuario Nacional de Ampay, en Abancay, Apurímac, Perú, ofrece paisajes de montaña y una diversidad biológica única. Un refugio natural para la fauna y flora.",
-        "url": "https://ejemplo.com/santuario-nacional-de-ampay"
-    },
-    "Monasterio de Santa Catalina": {
-        "info": "El Monasterio de Santa Catalina, en Arequipa, Perú, es una joya colonial que presenta arquitectura y arte religioso. Un oasis de paz en el corazón de la ciudad.",
-        "url": "https://ejemplo.com/monasterio-de-santa-catalina"
-    },
-    "Reserva Nacional de Salinas y Aguada Blanca": {
-        "info": "La Reserva Nacional de Salinas y Aguada Blanca, en Arequipa y Moquegua, Perú, resguarda paisajes altiplánicos, fauna andina y lagunas escénicas.",
-        "url": "https://ejemplo.com/reserva-nacional-de-salinas-y-aguada-blanca"
-    },
-    "Reserva Paisajística Sub Cuenca del Cotahuasi": {
-        "info": "La Reserva Paisajística Sub Cuenca del Cotahuasi, en Arequipa, Perú, ofrece cañones profundos y paisajes impresionantes. Un tesoro natural para los amantes del trekking.",
-        "url": "https://ejemplo.com/reserva-paisajistica-sub-cuenca-del-cotahuasi"
-    }
+  "CATARATAS DE GOCTA": {
+    "info": "Las Cataratas de Gocta son una maravilla natural ubicada en la región de Amazonas, Perú. Con una altura de 771 metros, es una de las cataratas más altas del mundo.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Gocta.jpg"
+  },
+  "CAVERNA DE QUIOCTA": {
+    "info": "La Caverna De Quiocta es una impresionante cueva ubicada en la provincia de Bongará, Amazonas. Con impresionantes formaciones de estalactitas y estalagmitas, es un destino espeleológico fascinante.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Caverna_de_Quiocta.jpg"
+  },
+  "COMPLEJO ARQUEOLOGICO DE KUELAP": {
+    "info": "Situado en la región de Amazonas, Perú, el Complejo Arqueológico de Kuélap destaca por sus estructuras de piedra y ofrece vistas impresionantes desde lo alto de la montaña.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Arquitectura_de_Kuelap.jpg"
+  },
+  "MUSEO DE LEYMEBAMBA": {
+    "info": "Ubicado en Leymebamba, Amazonas, Perú, el Museo alberga momias y artefactos funerarios Chachapoyas, ofreciendo una visión única de la cultura ancestral de la región.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1318283279.JPG?itok=1oX1Pnk2"
+  },
+  "SITIO ARQUEOLOGICO DE KARAJIA": {
+    "info": "Enclavado en los Andes de Amazonas, Perú, el Sitio Arqueológico de Karajía presenta 'purunmachus', estatuas funerarias únicas en acantilados de difícil acceso.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Karajia1.jpg"
+  },
+  "SITIO ARQUEOLOGICO REVASH": {
+    "info": "Ubicado en la región de Amazonas, Perú, el Sitio Arqueológico de Revash exhibe mausoleos decorados, revelando prácticas funerarias fascinantes de la civilización Chachapoyas.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Mausoleos_de_Revash.jpg"
+  },
+  "MONUMENTO ARQUEOLOGICO CHAVIN DE HUANTAR": {
+    "info": "El Monumento Arqueológico Chavín de Huántar, en los Andes peruanos, es un centro religioso con esculturas impresionantes que reflejan la influencia espiritual de la época.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Chav%C3%ADn_de_Hu%C3%A1ntar_-_51148181187.jpg"
+  },
+  "MONUMENTO ARQUEOLOGICO DE WILLKAWAIN": {
+    "info": "Ubicado en Ancash, Perú, el Monumento Arqueológico De Willkawain presenta estructuras preincaicas con detalles artísticos. Ofrece una visión fascinante de la historia regional.",
+    "url": "https://ejemplo.com/monumento-arqueologico-de-willkawain"
+  },
+  "MUSEO ARQUEOLOGICO DE ANCASH  AGUSTO SORIANO INFANTE ": {
+    "info": "El Museo Arqueológico De Ancash en Huaraz, Perú, resguarda artefactos preincaicos y momias. Un tesoro cultural que revela la riqueza arqueológica de la región.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1150172009_1.JPG?itok=oeeAd39I"
+  },
+  "MUSEO REGIONAL DE CASMA  MAX UHLE ": {
+    "info": "En Casma, Ancash, Perú, el Museo Regional 'Max Uhle' exhibe arte preincaico y ofrece una ventana al pasado. Un lugar imperdible para los amantes de la arqueología.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1464052741_1.jpg?itok=UPnDVuaE"
+  },
+  "PARQUE NACIONAL HUASCARAN": {
+    "info": "El Parque Nacional Huascarán, en Ancash, Perú, alberga la cordillera tropical más alta del mundo. Un paraíso natural con picos nevados, lagunas y biodiversidad excepcional.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Nevado_Huascar%C3%A1n3.jpg"
+  },
+  "CONJUNTO ARQUEOLOGICO DE SAYWITE": {
+    "info": "En la provincia de Abancay, Apurímac, Perú, el Conjunto Arqueológico de Saywite destaca por su monolito grabado. Un sitio misterioso con significado arqueoastronómico.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Sayhuite_Archaeological_site_-_overview.jpg"
+  },
+  "MUSEO ARQUEOLOGICO ANTROPOLOGICO DE APURIMAC": {
+    "info": "Ubicado en Abancay, Apurímac, Perú, el Museo Arqueológico Antropológico resguarda vestigios culturales que revelan la rica historia de la región.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_425284493_0.jpg?itok=_vFq7vHA"
+  },
+  "SANTUARIO NACIONAL DE AMPAY": {
+    "info": "El Santuario Nacional de Ampay, en Abancay, Apurímac, Perú, ofrece paisajes de montaña y una diversidad biológica única. Un refugio natural para la fauna y flora.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Uspaccocha_nevado.jpg"
+  },
+  "MONASTERIO DE SANTA CATALINA": {
+    "info": "El Monasterio de Santa Catalina, en Arequipa, Perú, es una joya colonial que presenta arquitectura y arte religioso. Un oasis de paz en el corazón de la ciudad.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Monasterio_de_Santa_Catalina%2C_Arequipa.jpg"
+  },
+  "RESERVA NACIONAL DE SALINAS Y AGUADA BLANCA": {
+    "info": "La Reserva Nacional de Salinas y Aguada Blanca, en Arequipa y Moquegua, Perú, resguarda paisajes altiplánicos, fauna andina y lagunas escénicas.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Laguna_de_Salinas%2C_Arequipa%2C_Per%C3%BA%2C_2015-08-02%2C_DD_16-19_PAN.JPG"
+  },
+  "RESERVA PAISAJISTICA SUB CUENCA DEL COTAHUASI": {
+    "info": "La Reserva Paisajística Sub Cuenca del Cotahuasi, en Arequipa, Perú, ofrece cañones profundos y paisajes impresionantes. Un tesoro natural para los amantes del trekking.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Panorama_Cotahuasi.jpg"
+  },
+  "SANTUARIO NACIONAL LAGUNAS DE MEJIA": {
+    "info": "El Santuario Nacional Lagunas de Mejía, ubicado en la región de Arequipa, Perú, es un paraíso para observadores de aves. Rodeado de lagunas y humedales, alberga una diversidad única de avifauna migratoria y residente. Este sitio protegido ofrece la oportunidad de admirar flamencos, patos y otras especies en su hábitat natural. Además, sus senderos permiten explorar la exuberante vegetación, convirtiéndolo en un destino ideal para amantes de la naturaleza y la ornitología.",
+    "url": "https://blog.redbus.pe/wp-content/uploads/2018/04/santuario-nacional-lagunas-de-mejia.jpg"
+  },
+  "VALLE DEL COLCA": {
+    "info": "El Valle del Colca, ubicado en la provincia de Caylloma, Perú, es famoso por su impresionante cañón, uno de los más profundos del mundo. Sus pintorescos pueblos, como Chivay y Yanque, ofrecen una auténtica experiencia cultural. Los visitantes pueden disfrutar de majestuosas vistas de los cóndores en el Mirador Cruz del Cóndor, así como explorar terrazas agrícolas preincaicas y relajarse en aguas termales naturales. Este valle combina paisajes asombrosos con rica herencia cultural, convirtiéndolo en un destino imperdible para los amantes de la naturaleza y la historia.",
+    "url": "https://www.peru.travel/contenido/uploads/ca%C3%B1on-colca-atractivo_637714714209245072.jpg"
+  },
+  "CENTRO ARQUEOLOGICO INTIHUATANA": {
+    "info": "El Centro Arqueológico Intihuatana se encuentra en el Valle Sagrado de los Incas, en Ollantaytambo, Perú. Destacando por su complejo sistema de terrazas agrícolas y sus imponentes estructuras de piedra, el sitio alberga el famoso Intihuatana, un ritualístico y misterioso monolito incaico. Además de la espectacular arquitectura, los visitantes pueden explorar el Templo del Sol y sus calles empedradas. Intihuatana ofrece una fascinante visión de la ingeniería y la espiritualidad de la civilización inca, sumergiendo a los visitantes en un viaje a través del tiempo en este enclave histórico.",
+    "url": "https://www.iperu.org/wp-content/uploads/2016/01/complejo-arqueologico-intiwatana-768x389.jpg"
+  },
+  "COMPLEJO ARQUEOLOGICO DE WARI": {
+    "info": "El Complejo Arqueológico de Wari se encuentra en la región de Ayacucho, Perú. Es un antiguo centro ceremonial y urbano de la cultura Wari, que floreció entre los siglos VI y IX d.C. El sitio abarca vastas áreas con impresionantes estructuras de piedra, patios y recintos ceremoniales. El Templo Mayor y la Plaza Hundida son destacados puntos de interés. Este complejo arqueológico revela la avanzada planificación urbana y arquitectónica de la cultura Wari, ofreciendo a los visitantes una ventana fascinante a la historia preincaica de la región.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tomb_at_Wari_ruins_near_Ayacucho.jpg"
+  },
+  "MUSEO ARQUEOLOGICO HIPOLITO UNANUE": {
+    "info": "El Museo Arqueológico Hipólito Unanue se sitúa en Puno, Perú, a orillas del lago Titicaca. Nombrado en honor al médico y prócer Hipólito Unanue, el museo exhibe una rica colección de artefactos preincaicos y objetos de la cultura Tiahuanaco. Entre sus destacadas piezas se encuentran cerámicas, textiles y utensilios que ofrecen una visión única de las antiguas civilizaciones que poblaron la región. Este museo es una parada imperdible para quienes buscan comprender la riqueza cultural y arqueológica de la zona del lago Titicaca.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1388030799.JPG?itok=7JYtyhVt"
+  },
+  "MUSEO DE SITIO DE QUINUA": {
+    "info": "El Museo de Sitio de Quinua se encuentra en la localidad de Quinua, Ayacucho, Perú. Este museo está dedicado a preservar la memoria de la Batalla de Ayacucho, que selló la independencia de Perú. Exhibe una variada colección de armas, uniformes, documentos históricos y objetos relacionados con la contienda. El edificio en sí es una réplica de una vivienda de la época colonial, brindando a los visitantes una experiencia inmersiva. El Museo de Sitio de Quinua es un tributo a la historia patriótica de Perú y un testimonio tangible de su lucha por la libertad.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1274755288_1.JPG?itok=YlgdSqkV"
+  },
+  "RESERVA NACIONAL PAMPA GALERAS BARBARA D ACHILLE": {
+    "info": "La Reserva Nacional Pampa Galeras Bárbara D'Achille se encuentra en la provincia de Lucanas, Ayacucho, Perú. Este santuario es conocido por ser un hábitat natural protegido para la vicuña, una especie de camélido sudamericano. La reserva ofrece a los visitantes la oportunidad de observar a estos elegantes animales en su entorno natural, así como aprender sobre los esfuerzos de conservación para preservar la vicuña. Con impresionantes paisajes andinos, la Reserva Nacional Pampa Galeras es un destino único que combina la belleza natural con la conservación de una especie emblemática de la región.",
+    "url": "https://ilamdir.org/blobs/ilamdir/w300h300-cropped/328/2020/31/ayacucho-animales.png"
+  },
+  "SANTUARIO HISTORICO PAMPA DE AYACUCHO": {
+    "info": "El Santuario Histórico Pampa de Ayacucho se encuentra en la provincia de Huamanga, Ayacucho, Perú. Este sitio conmemora la Batalla de Ayacucho, que marcó el fin de la dominación española en América del Sur y aseguró la independencia de Perú. El lugar alberga monumentos, como la Columna de la Libertad, así como tumbas y mausoleos en honor a los caídos. Visitantes pueden explorar el campo de batalla, conocer detalles históricos y disfrutar de impresionantes vistas. El Santuario Histórico Pampa de Ayacucho es un testimonio tangible de la lucha por la libertad en la historia peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/OBELISCO_DE_LA_PAMPA_DE_LA_QUINUA-AYACUCHO-PER%C3%9A.jpg"
+  },
+  "CENTRO ARQUEOLOGICO VENTANILLAS DE OTUZCO": {
+    "info": "El Centro Arqueológico Ventanillas de Otuzco se encuentra en la región de Cajamarca, Perú. Este sitio arqueológico es conocido por sus tumbas preincaicas talladas en roca, que tienen la forma de pequeñas ventanas o nichos, de ahí su nombre. Estas estructuras fueron utilizadas para entierros en la época de la cultura Cajamarca. Los visitantes pueden explorar las distintas galerías y aprender sobre las prácticas funerarias de esta antigua civilización. El Centro Arqueológico Ventanillas de Otuzco ofrece una fascinante visión de la historia y las costumbres funerarias de la región.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Cajamarca_Ventanillas_de_Otuzco_lou.jpg"
+  },
+  "COMPLEJO MONUMENTAL BELEN": {
+    "info": "El Complejo Monumental Belén se encuentra en la ciudad de Trujillo, Perú. Este sitio arqueológico es conocido por sus impresionantes estructuras de barro y adobe que datan de la época preincaica, especialmente de la cultura Moche. El complejo incluye patios, corredores y pirámides escalonadas, destacando la Huaca de Belén. Los visitantes pueden admirar las antiguas representaciones murales y aprender sobre la rica historia de la región. El Complejo Monumental Belén ofrece una ventana única a la arquitectura y la cultura de una civilización antigua en la costa norte del Perú.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/EgliseBelen_02.jpg"
+  },
+  "MONUMENTO ARQUEOLOGICO CUMBEMAYO": {
+    "info": "El Monumento Arqueológico Cumbemayo se ubica cerca de Cajamarca, Perú. Destacado por su complejo sistema de acueductos preincaicos, Cumbemayo es un testimonio de la ingeniería avanzada de la cultura Cajamarca. La Frailones, formaciones rocosas talladas de manera peculiar, añaden un toque distintivo al paisaje. El canal de Cumbemayo, que se extiende por varios kilómetros, es una maravilla de la ingeniería hidráulica antigua. Este monumento arqueológico ofrece a los visitantes una experiencia única al explorar las estructuras milenarias y la impresionante geografía de la región.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Cumbe_Mayo_Archaeological_site_-_aqueduct.jpg"
+  },
+  "SITIO ARQUEOLOGICO KUNTUR WASI": {
+    "info": "El Sitio Arqueológico Kuntur Wasi se localiza en la región de Cajamarca, Perú. Este antiguo complejo arqueológico pertenece a la cultura Cajamarca y destaca por sus monumentales construcciones, plazas y pirámides. Kuntur Wasi es reconocido por la Estela de Raimondi, una talla monolítica que representa figuras antropomorfas y zoomorfas, siendo una de las piezas más importantes del arte preincaico. Los visitantes pueden explorar las estructuras ceremoniales y apreciar la rica iconografía de este sitio, que ofrece valiosa información sobre la compleja sociedad y religión de la cultura Cajamarca.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Kuntur_Wasi.jpg"
+  },
+  "ZONA RESERVADA CHANCAYBANOS": {
+    "info": "La Zona Reservada Chancaybaños abarca la cuenca de la quebrada Agua Dulce, afluente del río Chancay y una llanura con pendientes suaves cubiertas de bosque. Se halla comprendida entre el río Huamboyaco, la quebrada El Agua Dulce y la carretera Santa Cruz-Chota. Además, se encuentra en el lugar conocido como Los Baños, donde emanan unas aguas termales muy conocidas en la región y con un alto potencial turístico, poco promocionado a la fecha. Protege y conserva los afloramientos de aguas termales subterráneas y las especies silvestres que habitan en el bosque aledaño.",
+    "url": "https://consultasenlinea.mincetur.gob.pe/fichaInventario//foto.aspx?cod=295512"
+  },
+  "ISLOTES PALOMINO": {
+    "info": "Los Islotes Palomino, frente a la costa de Lima, Perú, son un paraíso marino conocido por sus colonias de aves, especialmente los pingüinos de Humboldt. En excursiones en bote desde el puerto de Callao, los visitantes pueden disfrutar de la cercanía con estas encantadoras aves, así como con lobos marinos. La experiencia ofrece una conexión única con la vida marina en el océano Pacífico y es una opción popular para los amantes de la naturaleza y la observación de aves.",
+    "url": "https://www.google.com/search?q=Islotes+Palomino&oq=Islotes+Palomino&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORjjAhiABDIHCAEQLhiABDIICAIQABgWGB7SAQc1NzJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+  },
+  "MUSEO DE SITIO NAVAL SUBMARINO ABTAO": {
+    "info": "El Museo de Sitio Naval Submarino Abtao, en Callao, Perú, ofrece una experiencia fascinante dentro de un submarino de la Marina de Guerra peruana. Este submarino, en servicio de 1954 a 1998, permite a los visitantes explorar sus compartimientos y aprender sobre la historia naval del país. La visita proporciona una perspectiva única de la vida a bordo y destaca la importancia estratégica de los submarinos en la marina peruana. Ideal para entusiastas de la historia militar y marítima, el museo ofrece una inmersión educativa en las operaciones submarinas del Perú.",
+    "url": "https://www.museosubmarinoabtao.com/wp-content/uploads/2021/06/slide-01-mobile.webp"
+  },
+  "MUSEO FORTALEZA DEL REAL FELIPE": {
+    "info": "El Museo Fortaleza del Real Felipe se encuentra en el Callao, Lima, Perú. Situada en la histórica Fortaleza del Real Felipe, esta edificación defensiva fue construida durante la época colonial para proteger el puerto. El museo exhibe una rica colección de artefactos históricos, armas antiguas y uniformes. Los visitantes pueden explorar las sólidas murallas, los pasadizos y las vistas panorámicas al océano Pacífico. La Fortaleza del Real Felipe, con su museo, ofrece una inmersión en la historia militar peruana y una vista privilegiada de la estratégica importancia de este puerto en el pasado.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_488249838.JPG?itok=6H4yTrdc"
+  },
+  "MUSEO NAVAL DEL PERU CAPITAN DE NAVIO JULIO ELIAS MURGUIA": {
+    "info": "El museo se inauguró el 14 de noviembre de 1958, siendo su fundador y primer director el Capitán de Navío Julio José Elías Murguía. Se ubica en el centro histórico del Callao y cuenta con once salas de exposición permanente de naturaleza temática que abarca la historia marítima peruana desde la navegación en época prehispánica pasando por los diferentes períodos de nuestro desarrollo, incluyendo el dominio naval del país, el máximo héroe Miguel Grau, la diversidad del Mar de Grau, la presencia de las fuerzas navales en el Altiplano y la Antártida, además del ámbito fluvial y terrestre del territorio, y una sala de exposición temporal que proyecta diversidad de temas afines a la Marina de Guerra del Perú.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1589399548.jpg?itok=RN4nKK62"
+  },
+  "CAMINO INKA CHACHABAMBA": {
+    "info": "El Camino Inca Corto a Machu Picchu comienza en el km. 104 del antiguo ferrocarril desde la ciudad de Cusco hasta la ciudadela. Después de cruzar un puente sobre el río Urubamba, llegarás al sitio de Chachabamba, el primer punto culminante de este increíble recorrido. Esta maravillosa atracción se encuentra en medio de hermosas y enormes montañas verdes, con una vista invaluable; se encuentra a 6.995 pies sobre el nivel del mar, donde las nubes están casi frente a los excursionistas.",
+    "url": "https://www.tours-machupicchu-peru.com/wp-content/uploads/2021/11/Todo-sobre-Chachabamba-980x551.jpg"
+  },
+  "CAMINO INKA INTIHUATANA": {
+    "info": "El Intihuatana es una de las construcciones de Machu Picchu que más visitantes quieren conocer. Está en la parte más alta del sector religioso, en el corazón de la ciudadela. Es un sólido monolito tallado en tres niveles de tal manera que al recibir los rayos del sol; su sombra señala la época de siembra y cosecha en el lugar. La creencia popular manifiesta que al acercar las manos allí, uno se llena de las energías del sol.",
+    "url": "https://imachupicchu.com/wp-content/uploads/intihuatana-machu-picchu.jpg"
+  },
+  "CAMINO INKA PISCACUCHO": {
+    "info": "Piscacucho en Cusco, es el lugar dónde comienza el camino inca hacia Machu Picchu. El Camino Inca a Machu Picchu o  Qhapaq Ñan es la Ruta de trekking y camping con 39 km de recorrido. El camino más largo se inicia en Piscacucho (Km 82) de la línea férrea hacia Machu Picchu. Atraviesa diferentes ecosistemas, colosales sitios arqueológicos y parajes ricos en flora y fauna, hasta llegar a la ciudadela de Machu Picchu.",
+    "url": "https://www.intupacusco.com/wp-content/uploads/2020/03/Piscacucho-Km-82-980x613.jpg"
+  },
+  "CAMINO INKA QORIHUAYRACHINA": {
+    "info": "Qorihuayrachina (Cerro Victoria), 35 km (22 millas) está ubicado al suroeste de Machu Picchu. Las ruinas de un gran asentamiento que podría haber sido ocupado por los incas mucho antes de que construyeran un imperio que abarcaba todo el continente. Entre las ruinas se encuentran tumbas y plataformas, que sugieren un importante sitio de entierro y ritos sagrados, aunque también hay indicios de que el sitio era una ciudad entera.",
+    "url": "https://www.intupacusco.com/wp-content/uploads/2020/03/Qoriwayrachina-980x613.jpg"
+  },
+  "CIUDAD INKA DE MACHU PICCHU": {
+    "info": "Machu Picchu, ubicada en los Andes peruanos, es una ciudad inca bien conservada y una de las maravillas arqueológicas del mundo. Construida en el siglo XV, esta ciudadela presenta terrazas agrícolas, templos, y estructuras residenciales con una ingeniería asombrosa. Perdida durante siglos y redescubierta en 1911, Machu Picchu ofrece vistas impresionantes de los picos montañosos circundantes. Su diseño refleja una profunda conexión con la naturaleza y la astronomía incaica. Hoy en día, es un destino turístico emblemático y un sitio declarado Patrimonio de la Humanidad, atrayendo a visitantes de todo el mundo.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Machu_Picchu%2C_Peru_%282018%29.jpg"
+  },
+  "COMPLEJO ARQUEOLOGICO DE MORAY": {
+    "info": "El Complejo Arqueológico de Moray se encuentra en la región de Cusco, Perú. Destaca por sus terrazas circulares, construidas en depresiones naturales del terreno. Estas terrazas, dispuestas en círculos concéntricos, eran utilizadas por los incas con propósitos agrícolas y experimentación de cultivos. La ingeniería precisa y el diseño único de Moray sugieren su función como un laboratorio agrícola. Rodeado de impresionantes paisajes andinos, este sitio arqueológico es una muestra fascinante de la avanzada tecnología agrícola de la civilización inca.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Moray_-_Qechuyoq.JPG"
+  },
+  "COMPLEJO ARQUEOLOGICO DE TIPON": {
+    "info": "El Complejo Arqueológico de Tipón se ubica en la región de Cusco, Perú. Es conocido por sus terrazas agrícolas y sistemas de irrigación incaicos bien conservados. Este sitio muestra la habilidad de los incas en el manejo del agua y la ingeniería hidráulica. Las terrazas, fuentes, canales y muros de Tipón reflejan un diseño meticuloso que permitía controlar y distribuir el agua de manera eficiente. Además de su función agrícola, Tipón también posee espacios ceremoniales. La visita a este complejo arqueológico ofrece una visión única de las habilidades hidráulicas y arquitectónicas de la cultura inca.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Tiponperu.jpg"
+  },
+  "EXPLANADA DE SACSAYHUAMAN": {
+    "info": "La Explanada de Sacsayhuamán se encuentra en las afueras de la ciudad de Cusco, Perú. Es parte del complejo arqueológico de Sacsayhuamán y es conocida por sus enormes muros de piedra megalítica. Estas estructuras ciclópeas fueron construidas por los incas y son famosas por la precisión con la que las piedras encajan sin necesidad de mortero. La explanada es escenario de importantes festividades, como la celebración del Inti Raymi, la ceremonia incaica del solsticio de invierno. Ofrece vistas panorámicas de Cusco y es un testimonio impresionante de la ingeniería y arquitectura incaica.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Sacsayhuam%C3%A1n%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_01.JPG"
+  },
+  "MUSEO DE SITIO MANUEL CHAVEZ BALLON": {
+    "info": "La creación del museo surge hacia la década de 1960 - 1970 por iniciativa del Dr. Manuel Chávez Ballón, y luego de diferentes procesos de remodelación se concreta su reapertura con un nuevo enfoque museográfico el 25 de julio de 2005. Su denominación es en honor a su primer fundador y ofrece a sus visitantes cinco salas de exhibición permanentes, en cuyos contenidos se muestra didácticamente el proceso cultural y momentos históricos que se dieron en el actual ámbito del Parque Arqueológico Nacional de Machupicchu - Santuario Histórico de Machupicchu, a través de ocho secuencias complementadas con infografías, paneles, mapas, videos y en especial por las muestras de los fondos de colección como cerámica, líticos, metales y otros.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_207155751_0.JPG?itok=mjOXMZEA"
+  },
+  "MUSEO HISTORICO REGIONAL DE CUSCO": {
+    "info": "El Museo Histórico Regional, Casa del Inca Garcilaso de la Vega, fue creado el 1 de marzo de 1967, ofrece a sus visitantes trece salas de exhibición permanente y una sala de exposición temporal; dividido en dos niveles, el museo presenta en el primer nivel un total de seis salas de exhibición con material arqueológico correspondiente a diferentes desarrollos culturales presentes en el valle del Cusco. El segundo nivel del museo exhibe siete salas con bienes histórico artísticos y etnográficos.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_73343330_0.jpg?itok=hYuLconN"
+  },
+  "OLLANTAYTAMBO": {
+    "info": "Ollantaytambo, ubicado en el Valle Sagrado de los Incas, Perú, es un fascinante sitio arqueológico y un pintoresco pueblo. Las imponentes terrazas incas, templos y estructuras ceremoniales revelan su importancia histórica y arquitectónica. El pueblo conserva su trazado incaico y es un punto de partida para viajes a Machu Picchu, con una estación de tren. Ollantaytambo ofrece a los visitantes una conexión única con la cultura inca, hermosos paisajes y una experiencia auténtica en los Andes peruanos.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Town_of_Ollantaytambo.jpg/250px-Town_of_Ollantaytambo.jpg"
+  },
+  "PARQUE ARQUEOLOGICO DE CHOQUEQUIRAO": {
+    "info": "El Parque Arqueológico de Choquequirao se encuentra en las montañas de la región de Cusco, Perú. A menudo llamada la hermana sagrada de Machu Picchu, Choquequirao es un sitio arqueológico incaico impresionante. Con terrazas agrícolas, plazas y estructuras ceremoniales, se alza en lo alto de los Andes. La caminata para llegar allí ofrece desafíos pero recompensas panorámicas. Choquequirao cautiva a los aventureros con su encanto remoto y la sensación de descubrimiento. Este sitio arqueológico representa una joya oculta que revela la grandeza de la civilización inca.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Choquequirao-cusco.jpg"
+  },
+  "PARQUE ARQUEOLOGICO DE PIKILLACTA": {
+    "info": "El Parque Arqueológico de Pikillacta se encuentra en la región de Cusco, Perú. Este antiguo sitio preincaico pertenece a la cultura Huari y destaca por su extensión y complejidad. Las ruinas incluyen estructuras arquitectónicas, plazas y sistemas de canalización de agua. Pikillacta ofrece una visión fascinante de la planificación urbana avanzada de la cultura Huari, con sus calles rectas y patrones geométricos. La ubicación estratégica de Pikillacta, cerca de Cusco, lo convierte en una parada interesante para aquellos que buscan explorar la diversidad de las civilizaciones preincaicas en la región.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pikillaqta_was_a_Wari_%28pre-Inca%29_ceremonial_site._The_stonework_is_much_rougher_than_at_Pisac._%2822995133933%29.jpg"
+  },
+  "PARQUE ARQUEOLOGICO DE RAQCHI": {
+    "info": "El Parque Arqueológico de Raqchi se encuentra en la región de Cusco, Perú. Destaca por las ruinas del Templo de Wiracocha, una imponente estructura incaica con enormes paredes y once andenes. Este templo fue dedicado a Wiracocha, la deidad suprema de la mitología inca. Raqchi es reconocido por su arquitectura única y sus extensas áreas, que incluyen recintos ceremoniales y viviendas. La visita a este parque arqueológico proporciona una visión única de la grandeza arquitectónica inca y la importancia religiosa de este sitio histórico.",
+    "url": "https://es.wikipedia.org/wiki/Racchi#/media/Archivo:Image_Raqchi.jpg"
+  },
+  "PISAQ": {
+    "info": "Pisac, situado en el Valle Sagrado de los Incas en Perú, es conocido por su impresionante sitio arqueológico y su vibrante mercado. Las ruinas incas en Pisac incluyen terrazas agrícolas, templos y observatorios. Permite disfrutar de vistas panorámicas del valle. El mercado, colorido y lleno de vida, ofrece artesanías locales, textiles y productos tradicionales. Pisac fusiona historia y cultura, convirtiéndolo en un destino imperdible en la región.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/15-Pisac-nX-2.jpg"
+  },
+  "SANTUARIO HISTORICO DE MACHU PICCHU": {
+    "info": "El Santuario Histórico de Machu Picchu se encuentra en la región de Cusco, Perú. Esta ciudadela inca, declarada Patrimonio de la Humanidad y una de las Nuevas Siete Maravillas del Mundo, se alza majestuosamente en lo alto de los Andes. Rodeada de impresionantes paisajes, Machu Picchu presenta arquitectura refinada, terrazas agrícolas y templos ceremoniales. La ciudad perdida de los incas es un testimonio asombroso de la ingeniería y la espiritualidad incaicas. La experiencia de caminar por sus antiguos senderos ofrece una conexión única con la rica historia y la majestuosidad de los Andes peruanos.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/205_View_from_Sun_Gate_Machu_Picchu_Peru_2471_%2815164217895%29.jpg"
+  },
+  "MUSEO ARQUEOLOGICO SAMUEL HUMBERTO ESPINOZA LOZANO": {
+    "info": "El museo fue creado en 1992 por iniciativa de los pobladores, gracias a la donación de la colección privada del investigador Samuel Humberto Espinoza Lozano, discípulo de Julio C. Tello. Cuenta con dos salas de exhibición permanente que muestran una amplia gama de textiles de distintas culturas como Paracas, Wari e Inca; además de artefactos líticos, monolitos, cerámica, metales y fotografías de sitios arqueológicos representan el acervo cultural de Huaytará.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1415597941_0.JPG?itok=NVXajotZ"
+  },
+  "MUSEO REGIONAL DANIEL HERNANDEZ MORILLO": {
+    "info": "El Museo Regional Daniel Hernández Morillo es un museo de antropología, arqueología y arte ubicado en la ciudad de Huancavelica, en Perú. Está dedicado al pintor peruano Daniel Hernández Morillo. El 20 de mayo de 2011 se inauguró Sala de arqueología. Está distribuido en dos áreas: Antropología – Arqueología y Arte Popular. El primero exhibe moluscos y especies marianas que datan de era terciaria y cuaternaria. El segundo muestra artesanía, folklore y cerámica huancavelicana.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1430114601_0.JPG?itok=dRw6ARH7"
+  },
+  "COMPLEJO ARQUEOLOGICO KOTOSH": {
+    "info": "El Complejo Arqueológico Kotosh se encuentra en Huánuco, Perú. Es uno de los sitios arqueológicos más antiguos de la región andina, datando del período precerámico. Destacan sus pirámides escalonadas y templos, como el Templo de las Manos Cruzadas. Kotosh refleja la habilidad temprana de la civilización andina en la construcción y la religión. La fascinante iconografía de las Manos Cruzadas sugiere conexiones culturales profundas. Este sitio arqueológico ofrece una ventana única a las raíces ancestrales de la civilización peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Templo_Blanco_de_Kotosh_amb_l%27edifici_del_Templo_de_las_Manos_darrera03.jpg"
+  },
+  "PARQUE NACIONAL TINGO MARIA  CUEVA DE LAS LECHUZAS ": {
+    "info": "El Parque Nacional Tingo María, hogar de la famosa Cueva de las Lechuzas, está en la región de Huánuco, Perú. La cueva recibe su nombre por las aves nocturnas que la habitan. Con impresionantes formaciones rocosas y estalactitas, la cueva ofrece una experiencia única para los amantes de la naturaleza y la aventura. Rodeado de exuberante vegetación amazónica, el parque también alberga lagunas y miradores con vistas espectaculares. El Parque Nacional Tingo María es una joya natural que combina biodiversidad, paisajes asombrosos y la mística de la Cueva de las Lechuzas.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Cueva_de_las_Lechuzas%2C_al_Parc_Nacional_de_Tingo_Mar%C3%ADa05.jpg"
+  },
+  "ISLAS BALLESTAS": {
+    "info": "Las Islas Ballestas se encuentran frente a la costa de Paracas, en la región de Ica, Perú. Conocidas como las Galápagos de Perú, estas islas son un refugio para aves marinas y lobos marinos. Los visitantes pueden realizar tours en bote desde Paracas para observar de cerca la impresionante fauna, que incluye pingüinos, pelícanos y cormoranes. Las formaciones rocosas y el entorno marino hacen de las Islas Ballestas un paraíso para los amantes de la vida silvestre y la observación de aves. Además, es común avistar delfines durante la travesía.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Ballestas_Islands_P%C3%A9rou_2011_%282%29.jpg"
+  },
+  "MIRADOR DE LAS LINEAS DE NASCA": {
+    "info": "Las Líneas y Geoglifos de Nasca, declarados Patrimonio de la Humanidad en 1994, constituyen uno de los principales legados culturales de nuestro país, que cada año atraen a turistas de todo el mundo. Para impulsar aún más el conocimiento de estas figuras precolombinas y el turismo en esta zona, el 4 de febrero se inauguró una nueva torre-mirador, cuya construcción e instalación fue posible gracias a la donación de la Cooperativa Pacífico y de un grupo de personas e instituciones de Japón. La nueva torre metálica tiene una altura de 20 metros y una capacidad para 25 personas. Está ubicada a la altura del kilómetro 424 de la carretera Panamericana Sur, distrito de Ingenio, provincia de Nasca, en Ica, frente al antiguo mirador.",
+    "url": "https://www.apj.org.pe/photos/shares/Noticias/2020/Mirador%20Nasca/_DSF8133_IG.jpg"
+  },
+  "MUSEO DE SITIO JULIO C  TELLO ": {
+    "info": "El Museo de Sitio Julio C. Tello en Paracas, Ica, Perú, rinde homenaje al arqueólogo peruano Julio C. Tello y exhibe artefactos de la cultura Paracas. La colección incluye tejidos, cerámicas y cráneos deformados, característicos de esta antigua civilización costeña. Este museo proporciona una visión detallada de la rica historia y las prácticas funerarias de la cultura Paracas, destacando su habilidad en la elaboración de textiles sofisticados. Ubicado cerca de la Reserva Nacional de Paracas, el museo es una parada educativa para aquellos interesados en la arqueología y la herencia cultural de la región.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_436983113_0.jpg?itok=TPHKxvL0"
+  },
+  "PUNTA SAN JUAN": {
+    "info": "Punta San Juan se encuentra en la región de Ica, Perú. Es una reserva natural y santuario de vida marina. Este sitio alberga una impresionante colonia de lobos marinos y diversas aves marinas, como pingüinos de Humboldt. La importancia de Punta San Juan radica en su papel como área de conservación y reproducción de la fauna marina. Los visitantes pueden disfrutar de excursiones para observar la fauna en su hábitat natural, aprendiendo sobre la conservación y biodiversidad de esta costa peruana. La reserva destaca por su compromiso con la protección de la vida silvestre en el océano Pacífico.",
+    "url": "https://i0.wp.com/adventuretravelperu.com/es/storagewp/2021/07/ica-punta-san-juan-macorna-turismo-peru-travel.jpg?resize=768%2C576&ssl=1"
+  },
+  "RESERVA NACIONAL DE PARACAS": {
+    "info": "La Reserva Nacional de Paracas se encuentra en la región de Ica, Perú. Es un área protegida que abarca tanto tierras como aguas, y destaca por su impresionante biodiversidad marina y terrestre. La reserva es conocida por albergar colonias de aves marinas, como pingüinos de Humboldt, así como una variedad de especies de mamíferos marinos. Sus playas y dunas también son hábitats importantes para diversas aves migratorias. Los visitantes pueden explorar la reserva en excursiones para observar la vida silvestre y disfrutar de sus paisajes desérticos costeros. La Reserva Nacional de Paracas es una joya natural en la costa peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Paracas_National_Reserve._Ica%2C_Peru.jpg"
+  },
+  "RESERVA NACIONAL DE SAN FERNANDO": {
+    "info": "La Reserva Nacional de San Fernando (RNSF) es tan rica que es considerada la segunda más importante en el Perú – que protege espacaios marinos- luego de la Reserva Nacional de Paracas. Si uno la visita podrá apreciar escenas tan asombrosas como la del cóndor andino descenciendo por los cerros hasta la franja marina, alentado por la vegetación de las lomas y las especies que viven en los alrededores. Pero esta es solo una de las razones por las cuales conocer esta Área Natural Protegida (ANP), la RNSF tiene mucho con lo que sorprender a los visitantes.",
+    "url": "https://peru.oceana.org/wp-content/uploads/sites/22/2020/03/3.jpg#main"
+  },
+  "MUSEO DE SITIO WARI WILLKA": {
+    "info": "El Museo de Sitio de Wari Willka fue creado el 14 de mayo de 1965, mediante Ley Nº 15563, y fue reaperturado el 21 de junio del año 2001. El museo cuenta con 04 salas de exposición permanente donde se visualiza el proceso de desarrollo de la cultura Huanca, tomando énfasis la cultura Huari. Asimismo cuenta con una sala temporal donde se realizan exposiciones temporales sobre el Patrimonio Cultural Inmaterial de la región.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1795956857_0.JPG?itok=S6HM6BEw"
+  },
+  "MUSEO REGIONAL DE ARQUEOLOGIA DE JUNIN": {
+    "info": "El Museo Regional de Arqueología de Junín fue creado mediante Resolución Jefatural N° 365/INC del 14 de junio de 1993, siendo el principal en su género en la región, pues custodia colecciones de gran interés científico, producto de diversas intervenciones arqueológicas efectuadas en los últimos años en esta parte del país. Actualmente cuenta con tres de salas de exposición, en la sala temporal se exhiben piezas diversas de arte popular, fotografía, material documental, pictórico, entre otros; en las dos salas permanentes se muestran obras representativas del arte alfarero prehispánico del país.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1092048934_0.JPG?itok=XzOidZd1"
+  },
+  "COMPLEJO ARQUEOLOGICO HUACA ARCO IRIS": {
+    "info": "Es una de las huacas más antiguas del valle de Moche, se le considera el primer asentamiento de la cultura Wari. Presenta una forma casi triangular y de plano inclinado. Para su construcción se usó el adobe y el barro. La estructura actual está formada por un muro perimetral de 228 m de longitud que abarca un área de 3 245 m2. La altura de la huaca alcanza aproximadamente los 10 m. Se calcula que su antigüedad es de 1 100 años. La edificación tiene una base de forma cuadrangular y paredes decoradas por altos relieves con representaciones zoomorfas y antropomorfas. El nombre de Dragón se debe a una de estas figuras: un ser bicéfalo con incontables patas. Los investigadores consideran que una de las funciones de este lugar fue ceremonial (estaría vinculado a rituales en honor del arco iris y otros fenómenos naturales relacionados con la fertilidad).",
+    "url": "https://arqueologiadigital.cultura.pe/sites/default/files/styles/flexslider_full/public/ortofotos/imagenes/huaca-arco-iris-ortofoto-12-01-2015.jpg?itok=E1rQKrTX"
+  },
+  "EL COMPLEJO ARQUEOLOGICO HUACA DEL SOL Y DE LA LUNA": {
+    "info": "El Complejo Arqueológico Huaca del Sol y Huaca de la Luna se encuentra en la región de La Libertad, Perú. Estos sitios son parte de la civilización Moche y destacan por sus grandes pirámides de adobe. La Huaca del Sol, aunque parcialmente destruida, fue una de las estructuras más grandes de la antigua América precolombina. La Huaca de la Luna, con murales bien conservados, revela detalles de la vida y creencias mochicas. Ambas huacas ofrecen una fascinante visión de la arquitectura y la cultura mochica, con la Huaca de la Luna especialmente conocida por sus impresionantes relieves y murales.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/H_Luna_Frisorestaurado_lou.jpg/800px-H_Luna_Frisorestaurado_lou.jpg"
+  },
+  "COMPLEJO ARQUEOLOGICO HUACA EL BRUJO": {
+    "info": "El Complejo Arqueológico Huaca El Brujo se encuentra en la región de La Libertad, Perú. Este sitio arqueológico es conocido por su pirámide escalonada, así como por los hallazgos arqueológicos relacionados con la cultura Moche. La Huaca El Brujo contiene estructuras de diferentes épocas, desde la cultura Moche hasta la época Chimú. Uno de los descubrimientos notables es la Dama de Cao, una momia bien conservada que perteneció a una gobernante o sacerdotisa mochica. El complejo ofrece una visión detallada de la compleja historia cultural y religiosa de la región a lo largo del tiempo.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Complejo_arqueol%C3%B3gico_Elbrujo_lou.jpg"
+  },
+  "MUSEO DE SITIO DE CHAN CHAN": {
+    "info": "El museo de sitio fue creado en mazo de 1990 y se ubica en la parte este de la Zona Arqueológica Monumental de Chan Chan. El museo describe el desarrollo cultural prehispánico de la región La Libertad, desde los primeros artefactos líticos hasta la cerámica de las culturas Moche y Chimú; desarrolla temas relacionados a la agricultura, técnicas de irrigación y productos cultivados en el valle de Moche; asimismo, cuenta con una sala computarizada que narra el origen y desarrollo del señorío Chimor.",
+    "url": "https://ddclalibertad.gob.pe/wp-content/uploads/2021/09/35-620x350.jpg"
+  },
+  "PALACIO NIKAN CASA DEL CENTRO": {
+    "info": "El palacio Nik An (nombre yunga que significa “Casa del Centro”), es uno de los 10 conjuntos amurallados del complejo arqueológico de Chan Chan, y se estima que fue construido o reutilizado en el siglo V, como mausoleo de un soberano chimú. Este complejo amurallado es el más estudiado y reconstruido por los arqueólogos, siendo el único recinto de Chan Chan abierto y acondicionado para el turismo desde 1964. Anteriormente llevaba el nombre del su primer promotor: Jacobo Tschudi (1838-1842), de procedencia suiza. Este complejo se encuentra perimetrado por murallas de 10 a 12 m de altura y 4 a 5 m de ancho de su base, rodeando ±108 850 m2 de superficie. Esta divido en nueve ambientes principales, los cuales son:",
+    "url": "https://flic.kr/p/GcR6x8"
+  },
+  "MUSEO DE SITIO DE TUCUME": {
+    "info": "El Museo de Sitio de Túcume se encuentra en la región de Lambayeque, Perú, cerca de las imponentes pirámides de Túcume. Este museo exhibe artefactos y hallazgos arqueológicos provenientes de las excavaciones en la zona, proporcionando una visión detallada de la historia de la cultura Lambayeque. Los visitantes pueden aprender sobre la vida cotidiana, la religión y las prácticas funerarias de esta antigua civilización. Además, el museo complementa la experiencia de explorar las impresionantes pirámides en el complejo arqueológico de Túcume, que consta de más de 25 estructuras preincaicas.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/MuseodeSitio_T%C3%BAcume1.JPG"
+  },
+  "MUSEO DE SITIO HUACA CHOTUNA   CHORNANCAP": {
+    "info": "El museo fue inaugurado el 19 de setiembre de 2009. Exhibe una recreación del arribo, desembarco, muerte y funeral de Naylamp, mítico personaje fundador de la cultura Lambayeque. Asimismo, muestra objetos de cerámica y de metal descubiertos de las investigaciones arqueológicas realizadas en la zona arqueológica.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_570154825_0.jpg?itok=WhQez2fv"
+  },
+  "EL MUSEO DE SITIO HUACA RAJADA   SIPAN": {
+    "info": "El Museo de Sitio Huaca Rajada - Sipán se encuentra en la región de Lambayeque, Perú. Este museo es conocido por albergar la colección de tumbas reales descubiertas en Huaca Rajada, que pertenecen a la cultura Moche. Uno de los hallazgos más destacados es la Tumba del Señor de Sipán, una tumba real con impresionantes objetos de oro, plata y cerámica. El museo exhibe estos tesoros arqueológicos, brindando a los visitantes una visión detallada de la compleja iconografía, artesanía y estructuras sociales de la cultura Moche. La visita proporciona una experiencia educativa única sobre la rica historia de la región.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Museo_de_Sitio_Huaca_Rajada_-_Sip%C3%A1n.jpg"
+  },
+  "MUSEO DE TUMBAS REALES DEL SENOR DE SIPAN": {
+    "info": "El Museo de Tumbas Reales del Señor de Sipán se encuentra en Lambayeque, Perú. Este museo es conocido por albergar la colección de tesoros recuperados de la tumba del Señor de Sipán, uno de los descubrimientos arqueológicos más significativos de América. La tumba, perteneciente a la cultura Moche, reveló objetos extraordinarios de oro, plata y cerámica. El museo exhibe de manera magnífica estos artefactos, ofreciendo a los visitantes una inmersión en la rica iconografía, artesanía y rituales funerarios de la cultura Moche. La visita al Museo de Tumbas Reales del Señor de Sipán es esencial para comprender la grandeza y complejidad de esta antigua civilización peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Tumbas_Reales_de_Sip%C3%A1n_Museum_01.jpg"
+  },
+  "MUSEO NACIONAL DE ARQUEOLOGIA Y ETNOGRAFIA HEINRICH BRUNNING": {
+    "info": "El Museo Arqueológico Nacional Brüning es el primer museo regional del Perú, fundado en el año 1921 por Hans Heinrich Brüning. Inicialmente se ubicó en la calle Dos de Mayo 271 y desde 1966 cuenta con un edificio de cuatro pisos gestionado por Don Oscar Fernández de Córdoba y diseñado por los arquitectos González & Prado. En la exhibición del Museo Brüning el visitante puede hacer un recorrido por las principales culturas de la costa norte del Perú, desde las primeras civilizaciones agro-alfareras hasta las sociedades complejas como Cupisnique, Mochica y Lambayeque; acompaña a esta muestra una fina y valiosa colección de objetos de oro que constituyen un verdadero tesoro y compendio artístico y tecnológico; así como las evidencias y representaciones de la tumba de la Sacerdotisa de Chornancap, una gobernante y sacerdotisa de la más alta jerarquía de la élite Lambayeque del siglo XII y XIII d.C. descubierta a fines del año 2011 en la Huaca Chotuna-Chornancap.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_764015458_0.JPG?itok=eDWHEfSq"
+  },
+  "MUSEO NACIONAL SICAN": {
+    "info": "El Museo Nacional Sican, también conocido como el Museo Nacional de Sicán, se encuentra en Ferreñafe, en la región de Lambayeque, Perú. Este museo alberga una destacada colección relacionada con la cultura Sicán (también conocida como la cultura Lambayeque), una civilización preincaica que floreció en la región. El museo exhibe objetos ceremoniales, joyería, cerámica y otros artefactos provenientes de las excavaciones arqueológicas en la zona de Sipán y Batán Grande. Proporciona a los visitantes una visión profunda de la compleja sociedad y las tradiciones de la cultura Sicán. La riqueza de la colección hace del Museo Nacional Sican un destino crucial para quienes buscan comprender la historia y la arqueología preincaica en el norte de Perú.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Museo_Nacional_de_Sic%C3%A1n_-_Fachada.jpg"
+  },
+  "SANTUARIO HISTORICO BOSQUE DE POMAC": {
+    "info": "El Santuario Histórico Bosque de Pomac se encuentra en la región de Lambayeque, Perú. Destaca por ser hogar del complejo arqueológico de Sicán, que revela la rica herencia de la cultura Sicán. Rodeado de bosques secos, el santuario alberga pirámides y tumbas con fascinantes hallazgos arqueológicos, como la Tumba del Señor de Sicán. Este sitio histórico y ecológico ofrece a los visitantes una experiencia única al explorar la conexión entre la cultura preincaica y la biodiversidad del bosque seco.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Casa_Karl_Weiss_-_panor%C3%A1mica_del_sitio.jpg"
+  },
+  "CASA MUSEO JOSE CARLOS MARIATEGUI": {
+    "info": "La Casa Museo José Carlos Mariátegui se encuentra en Moquegua, Perú. Es la casa natal del influyente escritor y pensador peruano José Carlos Mariátegui. El museo rinde homenaje a su legado, exhibiendo objetos personales, documentos y una biblioteca que refleja su vida y obra. Este lugar ofrece a los visitantes la oportunidad de sumergirse en la vida y el pensamiento de Mariátegui, figura clave en la historia intelectual y política de América Latina. La Casa Museo proporciona una experiencia única para comprender la influencia cultural y social de este destacado personaje peruano.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Casa_de_Jose_Carlos_Mariateguiiii.jpg"
+  },
+  "CENTRO TURISTICO CASTILLO DE CHANCAY": {
+    "info": "Primer Parque Temático Multicultural del Perú, a hora y media al norte de la ciudad de Lima, construido en la década de 1920 sobre un acantilado rocoso, a orillas del zócalo continental del Océano Pacífico, en la ciudad de Chancay, provincia de Huaral  en la región de Lima. Durante sus más de 30 años de funcionamiento como destino turístico, obligado de visitar  en el “norte chico”, ha obtenido diferentes reconocimientos como el de: “Centro Cultural” por el Poder Ejecutivo;  “Recurso Turístico del Perú” por el MITINCI (Ministerio de Turismo) en el año 2002 y Embajador de la “Marca PERÚ” de parte de Promperú desde el año 2012. Sin embargo el mayor reconocimiento es la gratitud de miles de turistas que vienen y regresan año a año.",
+    "url": "https://www.machupicchuterra.com/es/lima/huaral/castillo-chancay/#album=castillo-de-chancay&photo=castillo-de-chancay&ids=149&ida=321&idi=2089"
+  },
+  "CIRCUITO MAGICO DEL AGUA DEL PARQUE DE LA RESERVA": {
+    "info": "El Circuito Mágico del Agua se encuentra en el Parque de la Reserva en Lima, Perú. Este espectacular complejo de fuentes ha sido reconocido como el conjunto de fuentes más grande del mundo, según el Libro Guinness de los Récords. Ofrece un fascinante espectáculo de luces, música y agua en movimiento. Las fuentes temáticas, como la Fuente de la Fantasía y la Fuente Túnel de las Sorpresas, crean un ambiente mágico. El Circuito Mágico del Agua es un lugar popular para disfrutar de noches iluminadas y es una atracción destacada en la ciudad de Lima.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Lima%2C_Peru_-_Parque_de_la_Reserva_%28Park_of_the_Reserve%29_02.jpg"
+  },
+  "CIUDAD SAGRADA DE CARAL": {
+    "info": "La Ciudad Sagrada de Caral se encuentra en el valle de Supe, en la región de Lima, Perú. Es el sitio arqueológico más antiguo de América y una de las civilizaciones más antiguas del mundo. Caral prosperó alrededor del 3000 a.C. y presenta complejas estructuras piramidales, anfiteatros y plazas ceremoniales. Su importancia radica en su antigüedad y en el hecho de que es contemporánea de otras grandes civilizaciones antiguas. La Ciudad Sagrada de Caral proporciona una ventana única a la historia temprana de la civilización peruana y es reconocida como Patrimonio Mundial de la UNESCO.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Caral-15.jpg"
+  },
+  "MUSEO DE ARTE ITALIANO": {
+    "info": "El Museo de Arte Italiano se encuentra en Lima, Perú, ubicado en el Palacio de la Exposición. Este museo alberga una destacada colección de arte italiano, incluyendo pinturas, esculturas y objetos decorativos. Las obras exhibidas representan principalmente el Renacimiento y el Barroco italiano. El edificio en sí es una joya arquitectónica y fue construido para la Exposición del Centenario de la Independencia del Perú en 1921. El Museo de Arte Italiano ofrece a los visitantes la oportunidad de apreciar la riqueza cultural e histórica de la influencia italiana en el arte peruano.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Museodearteitaliano.jpg"
+  },
+  "MUSEO DE LA INQUISICION Y DEL CONGRESO": {
+    "info": "El Museo Monumental de la Inquisición y del Congreso es un museo de Lima, la capital de Perú. Está ubicado en el jirón Junín, a la altura de la plaza Bolívar. Se encuentra en el antiguo local del Tribunal del Santo Oficio de la Inquisición en Lima, tribunal eclesiástico con competencia en materia de delitos religiosos. Con el final de la época virreinal y el inicio de la República, el local pasó a ser ocupado por el Senado y, finalmente, convertido en museo. Este tiene como finalidad la investigación, conservación, exhibición y difusión de la historia del Congreso del Perú y de su patrimonio cultural.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Inquisition_Museum%2C_Lima.jpg"
+  },
+  "MUSEO DE SITIO ARTURO JIMENEZ BORJA   PURUCHUCO": {
+    "info": "Fundado el 24 de diciembre de 1960 por el Doctor Arturo Jiménez Borja. Expone bienes culturales de la vivencia de los habitantes del Curacazgo de Lati, épocas Ychsma e Inca, siglos XII - XVI. Resalta el tocado de Puruchuco vocablo quechua que significa “sombrero de plumas”, los quipus y la construcción del Palacio elaborado de adobe y tapia, vivienda de la máxima autoridad local. Se brinda visitas guiadas en español e inglés, además talleres educativos donde se enseñan la elaboración de los bienes culturales como; elaboración del quipu, cerámica, tejidos, entre otros y para los más pequeños presentación de títeres que narran la historia de Puruchuco.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_936756724.JPG?itok=aUElJic8"
+  },
+  "MUSEO DE SITIO EL MIRADOR DEL CERRO SAN CRISTOBAL": {
+    "info": "El museo creado en 1997 se encuentra ubicado en la cima del Cerro San Cristóbal, junto a la cruz erigida en el lugar. La sala ofrece una exposición de fotografías inéditas de Lima desde principios de siglo XIX. En las imágenes se pueden observar a los gestores de la cruz, los sacerdotes Francisco Aramburú y Francisco Javier Ampuero, así como algunas imágenes tomadas por los fotógrafos Courret y Garreud.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1694793478_0.JPG?itok=KzdkcO7U"
+  },
+  "MUSEO DE SITIO PUCLLANA": {
+    "info": "El Museo de Sitio Pucllana, inaugurado en 1984, alberga una colección de bienes culturales producto de las excavaciones arqueológicas realizadas desde el año 1981 por el Proyecto de Investigación, Conservación y Puesta en Valor Huaca Pucllana, dirigido por la Dra. Isabel Flores Espinoza hasta el año 2020. Desde el año 2005, la administración de los recursos financieros autogenerados por la institución ha sido delegada por el Ministerio de Cultura, mediante un convenio interinstitucional, a la Municipalidad de Miraflores. Cuenta con una infraestructura que incluye una sala de exposición, un circuito de visitas en la zona arqueológica, un parque de flora y fauna nativas, zona de servicios complementarios, depósitos, gabinetes y área administrativa. Cumple tres funciones principales que conducen sus actividades desde su creación: la investigación científica, como compromiso fundamental que comprende la excavación arqueológica y el análisis de materiales; la conservación arquitectónica y puesta en valor del sitio arqueológico; y la educación como nexo con la comunidad local, nacional e internacional.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1531633776.JPG?itok=H80U8thT"
+  },
+  "MUSEO DE SITIO HUALLAMARCA": {
+    "info": "El Museo de Sitio Huallamarca, inaugurado el 11 de agosto de 1960, alberga, conserva y expone una colección que data del Periodo Formativo (200 a. C.) hasta el Periodo Inca (1100 d. C.). Fueron casi 1300 años de ocupación del lugar y parte de sus evidencias materiales provienen de contexto funerarios hallados en el monumento y alrededores. Estos objetos forman parte de colecciones de material orgánico, textil, cerámico, lítico, mineral, óseo humano y animal.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1774825935_0.jpg?itok=vhcj_0fV"
+  },
+  "MUSEO DE SITIO PACHACAMAC": {
+    "info": "El museo, creado el 07 de julio de 1962, cuenta con una sala de donde se exhiben bienes culturales arqueológicos recuperados en las investigaciones realizadas en el sitio y la zona arqueológica monumental Pachacamac, como cerámicas, textiles, materiales orgánicos, restos humanos y animales de las diferentes culturas que ocuparon este centro ceremonial.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_314415825.JPG?itok=qpBZyRaZ"
+  },
+  "MUSEO NACIONAL DE ARQUEOLOGIA  ANTROPOLOGIA E HISTORIA DEL PERU": {
+    "info": "Este museo es el más antiguo y representativo de nuestro país por su valioso, variado y vasto patrimonio cultural que procede de las primeras expediciones científicas realizadas en el Perú, así como de las primeras colecciones formadas por el estado peruano. Se encuentra ejecutando un proyecto de mejoramiento integral y construcción que se extenderá hasta 2024. Dicho proyecto, ahora en curso de ejecución, implica también la renovación museográfica, cuyos avances se pueden apreciar en la Sala Independencia con la exhibición “La Independencia. Procesos e ideas”, abierta al público en La Quinta de los Libertadores.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_801044470.jpg?itok=6dXnOxA3"
+  },
+  "MUSEO NACIONAL DE LA CULTURA PERUANA": {
+    "info": "El Museo Nacional de la Cultura Peruana, fundado el 30 de marzo de 1946, posee la más importante colección pública de las artes populares y tradicionales que expresa las diversas regiones del país, que se caracterizan por su trayectoria histórica y su singularidad artística, como mates, keros, pintura, imaginería, retablos, piedra de Huamanga, platería, cerámica, tejidos, cestería, máscaras, juguetería, instrumentos musicales, entre otras. También, reúne la más valiosa colección de objetos etnográficos de la Amazonía, clasificados según las familias etnolingüísticas, como: awajun, ashaninka, shipibo-konibo, cocama, bora, yagua, etc. Asimismo, reúne originales archivos documentales, fotográficos y sonoros, y una invalorable producción bibliográfica y hemerográfica. El Museo realiza diversos eventos culturales para fortalecer los conocimientos, la identidad y la salvaguarda de su patrimonio cultural.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1293688272.jpg?itok=88h7UrHo"
+  },
+  "MUSEO ORO DEL PERU Y ARMAS DEL MUNDO": {
+    "info": "El Museo Oro del Perú y Armas del Mundo es un museo arqueológico y militar ubicado en el Distrito de Santiago de Surco, en Lima (Perú), creado en la década de 1960 a partir de la colección privada del empresario y diplomático peruano Miguel Mujica Gallo.",
+    "url": "https://blog.viajesmachupicchu.travel/wp-content/uploads/2024/01/Museo-de-Oro-768x681.jpg"
+  },
+  "REFUGIO DE VIDA SILVESTRE PANTANOS DE VILLA": {
+    "info": "El Refugio de Vida Silvestre Pantanos de Villa se encuentra en el distrito de Chorrillos, en Lima, Perú. Este oasis natural protegido abarca una extensa área de humedales, lagunas y manglares, ofreciendo refugio a diversas especies de aves migratorias y residentes. Los visitantes pueden disfrutar de actividades como observación de aves y caminatas, sumergiéndose en la belleza natural mientras aprenden sobre la importancia de la conservación de humedales. Pantanos de Villa es un escape tranquilo en la bulliciosa Lima, proporcionando un hábitat vital para la biodiversidad y una experiencia en la naturaleza para los visitantes.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Pantanosdevilla2013.jpg"
+  },
+  "RESERVA NACIONAL DE LACHAY": {
+    "info": "La Reserva Nacional de Lachay se encuentra en el departamento de Lima, Perú. Este ecosistema de lomas costeras es conocido por su biodiversidad única y su paisaje desértico. Durante la temporada de neblina (mayo a octubre), las lomas se cubren de un manto verde, creando un contraste impresionante con el árido entorno. La reserva es hogar de diversas especies de flora y fauna adaptadas a condiciones desérticas. Los visitantes pueden disfrutar de senderos, observar aves y apreciar la belleza efímera de este ecosistema especial durante los meses de neblina. La Reserva Nacional de Lachay es una joya natural en la costa peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Lomas_Lachay_1.jpg"
+  },
+  "RESERVA PAISAJISTICA NOR YAUYOS COCHAS": {
+    "info": "La Reserva Paisajística Nor Yauyos-Cochas se encuentra en las regiones de Lima y Junín, en Perú. Este extenso territorio abarca una diversidad de paisajes que van desde altas cumbres andinas hasta profundos cañones y valles. La reserva destaca por su belleza escénica, lagunas, ríos y una variedad de ecosistemas. Además, alberga comunidades locales que practican actividades tradicionales y preservan sus costumbres. Los visitantes pueden disfrutar de caminatas, observación de aves y experiencias culturales, sumergiéndose en la riqueza natural y cultural de Nor Yauyos-Cochas, una área que enfatiza la conservación y el turismo sostenible.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Espejos_de_agua_Reserva_Paisajistica_Nor_Yauyos_Cochas.jpg"
+  },
+  "RESERVA NACIONAL PACAYA SAMIRIA": {
+    "info": "La Reserva Nacional Pacaya Samiria se encuentra en la región de Loreto, en la Amazonía peruana. Es la reserva nacional más grande de Perú y una de las áreas protegidas más grandes de la cuenca del Amazonas. La reserva destaca por su biodiversidad excepcional, albergando una variedad de especies de plantas y animales, incluyendo aves, mamíferos y peces. Los visitantes pueden explorar la reserva a través de excursiones en bote, observación de vida silvestre y caminatas. Pacaya Samiria ofrece una experiencia única para sumergirse en la belleza natural y la riqueza biológica de la selva amazónica.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Aldea_del_Mara%C3%B1on_-_panoramio.jpg"
+  },
+  "RESERVA NACIONAL ALLPAHUAYO MISHANA": {
+    "info": "La Reserva Nacional Allpahuayo Mishana se localiza a 23 Km. al sur de Iquitos y se caracteriza principalmente por proteger una muestra representativa de los raros bosques de arena blanca y los bosques inundables por las aguas negras del río Nanay. Presenta dos tipos de hábitat notables: los varillajes y los bosques inundables. El primero de ellos se desarrolla sobre arena blanca y conforma un ecosistema muy especial con una alta diversidad de suelos y diferentes condiciones de drenaje. El segundo está conformado por bosques inundados por las aguas negras del río Nanay que albergan especies de rango muy restringido.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Allpahuayo_Mishana.jpg/800px-Allpahuayo_Mishana.jpg"
+  },
+  " RESERVA NACIONAL ALLPAHUAYO MISHANA": {
+    "info": "La Reserva Nacional Allpahuayo Mishana se encuentra en la región de Loreto, en la Amazonía peruana. Esta reserva es conocida por su excepcional biodiversidad y por albergar una variedad única de flora y fauna amazónica. La diversidad de hábitats, como bosques de tierra firme y bosques inundables, contribuye a la presencia de especies raras y endémicas. Los visitantes de la Reserva Nacional Allpahuayo Mishana pueden disfrutar de caminatas guiadas, observación de aves y exploración de la exuberante selva tropical. La reserva destaca por su importancia en la conservación de la diversidad biológica en la región amazónica peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Allpahuayo_Mishana.jpg"
+  },
+  "ZONA RESERVADA SIERRA DEL DIVISOR": {
+    "info": "La Zona Reservada Sierra del Divisor busca resguardar la Sierra del Divisor que es un complejo montañoso ubicado en pleno llano amazónico. Estas montañas tienen una gran pendiente y originan una divisoria de aguas a más de 900 m.s.n.m. El complejo de conos y colinas de origen volcánico presente en la región Contamana - Abujao - El Divisor constituye el origen de infinidad de pequeñas cuencas que drenan sus aguas hacia el río Ucayali en el Perú y el Yuruá en Brasil. Geológicamente constituye una de las zonas más antiguas de la Amazonía y posee paisajes espectaculares e inaccesibles. A su vez, la Zona Reservada Sierra del Divisor presenta zonas poco intervenidas con un alto grado de conservación que abarcan ecosistemas y comunidades biológicas de especies de flora y fauna endémicas y de distribución restringida, lo que la convierte en un área de gran importancia. Así también, posee numerosas caídas de agua, aguas termales y colpas de guacamayos, de gran belleza y atractivo.",
+    "url": "https://www.minam.gob.pe/wp-content/uploads/2014/01/600x276.jpg"
+  },
+  "PARQUE NACIONAL DEL MANU": {
+    "info": "El Parque Nacional del Manu se encuentra en las regiones de Madre de Dios y Cusco, en la selva amazónica del sureste de Perú. Este parque, considerado uno de los lugares más biodiversos del mundo, alberga una variedad de hábitats, desde tierras bajas hasta montañas. Hogar de una amplia gama de flora y fauna, incluyendo especies endémicas, el parque es un refugio para jaguares, tapires y guacamayos. Los visitantes pueden explorar su impresionante biodiversidad mediante tours guiados, brindando una experiencia única en la selva amazónica peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Manu_National_Park-71.jpg"
+  },
+  "RESERVA NACIONAL DE TAMBOPATA": {
+    "info": "La Reserva Nacional de Tambopata se encuentra en la región de Madre de Dios, en la Amazonía peruana. Este santuario natural destaca por su diversidad biológica, albergando una variedad de hábitats, desde selvas tropicales hasta ríos y lagunas. La reserva es hogar de numerosas especies, como jaguares, nutrias gigantes y una rica variedad de aves y mariposas. Los visitantes pueden disfrutar de excursiones para observar la vida silvestre, navegar por ríos y explorar la exuberante selva amazónica. Tambopata ofrece una experiencia inigualable para los amantes de la naturaleza en busca de aventuras en la Amazonía peruana.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%E6%A1%91%E5%A4%9A%E7%93%A6%E5%B0%94%E6%B9%96_%28Lago_Sandoval%29.jpg"
+  },
+  "MUSEO CONTISUYO": {
+    "info": "El Museo Contisuyo se inauguró el 9 de setiembre del año de 1994 con el auspicio de la Empresa Southern Peru, el apoyo de la Municipalidad Provincial Mariscal Nieto que cedió el terreno para su construcción y la autorización del entonces Instituto Nacional de Cultura. El museo es administrado por la Asociación Contisuyo, entidad cultural sin fines de lucro. El museo cuenta con colecciones arqueológicas producto de investigaciones que se realizaron desde los años ochenta en la cuenca del río Osmore en Moquegua, este material es de diferente naturaleza como líticos, cerámica, orgánico (restos humanos, textiles, artefactos de madera, botánicos, etc.). El museo tiene como principales objetivos, la investigación, exhibición y conservación del patrimonio de la región, realizando un trabajo especializada en aspectos de conservación, registro y catalogación; del mismo modo realiza diferentes actividades como muestras de artes plásticas, presentaciones musicales, actividades en conjunto con otras instituciones, etc. El museo ha recibido diferentes reconocimientos, como el Premio Fondo del Embajador para la Preservación de la Cultura (Embajada de los Estados Unidos) en el año 2008; y la Asociación Contisuyo fue ganadora del Premio Nacional de Cultura 2013 en la categoría Buenas Prácticas Institucionales.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1333741834.jpg?itok=zXUmMrRn"
+  },
+  "RESERVA NACIONAL DE ISLAS  ISLOTES Y PUNTAS GUANERAS   PUNTA DE COLES": {
+    "info": "Sus 180 hectáreas conforman el hábitat de lobos marinos (se estima que existen entre 3 500 y 4 000) y de una variedad de aves guaneras como pelícanos, piqueros, guanayes, zarcillos, pingüinos de Humboldt, gaviotas, entre otras. Representa una de los sistemas naturales más significativos en el contexto árido de la zona. Esta pequeña península alberga una rica biodiversidad marina que constituye un atractivo valioso para Ilo y una importante reserva natural. Lugar ideal para disfrutar de la naturaleza y rica biodiversidad al sur de Perú. Posee una variedad extraordinaria de aves y fauna marina.",
+    "url": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2020/03/03/000656116W.jpg"
+  },
+  "PARQUE NACIONAL YANACHAGA CHEMILLEN": {
+    "info": "El Parque Nacional Yanachaga Chemillén se encuentra en la región de Pasco, Perú, abarcando una amplia extensión de la Cordillera Oriental de los Andes. Este parque es conocido por su biodiversidad, albergando diversos ecosistemas que van desde bosques nublados hasta selvas tropicales. Yanachaga Chemillén es hogar de especies endémicas y amenazadas, como el oso de anteojos y el cóndor andino. Los visitantes pueden disfrutar de senderismo en medio de paisajes montañosos impresionantes, observar la vida silvestre y apreciar la riqueza natural de este parque nacional, que también protege importantes fuentes de agua en la región.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/On_Pampa_of_Quebrada_Yanachaga_at_an_altitude_of_3000_m_-_ZooKeys-235-051-g009B.jpeg"
+  },
+  "SANTUARIO NACIONAL DE HUAYLLAY": {
+    "info": "El Santuario Nacional de Huayllay es una área protegida del Perú que se estableció el 7 de agosto de 1974 con una extensión de 6.815 o n.º 0750-74-AG. Está ubicado en el corazón de la Meseta de Bombón, con el fondo escénico de la Cordillera de Huayhuash en el departamento de Pasco, provincia de Pasco. El objetivo principal del santuario es proteger las formaciones geológicas del bosque de piedras de Huayllay, así como su flora y fauna nativas.",
+    "url": "https://peru.info/archivos/publicacion/100-imagen-16225923122019.jpg"
+  },
+  "SALA DE ORO DEL MUSEO MUNICIPAL VICUS": {
+    "info": "Creada en mayo del 2001, la Sala de Oro del Museo Municipal Vicús busca aportar al conocimiento y difusión del legado de la tradición metalúrgica de nuestros antepasados, cuenta con cuatro ambientes: la sala de tecnología metalúrgica que muestra información sobre el proceso que realizaban los orfebres del antiguo Perú para transformar el metal usando diversas técnicas; la sala Frías, que exhibe un conjunto de objetos de oro extraídos de Frías (Ayabaca) y decomisados en 1956; la sala tumba 11, que muestra objetos de metal encontrados en los primeros estudios arqueológicos realizados en la necrópolis Vicús de Chulucanas; y la sala olleros donde se exhibe el ajuar funerario de un personaje hallado en Olleros (Ayabaca).",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1808453761.JPG?itok=JW8DaCa2"
+  },
+  "ZONA ARQUEOLOGICA Y MUSEO DE SITIO DE NARIHUALA": {
+    "info": "El museo creado en 1997 se encuentra dentro de la zona arqueológica Narihualá. Consta de tres salas: la Sala Arqueológica y la Sala Etnohistórica, que presentan bienes culturales recuperados en las investigaciones como cerámica y metales, además de bienes donados por los pobladores del lugar; y la Sala Wallak, que da a conocer las tradiciones vivas de Narihualá como el tejido en paja toquilla, la elaboración de cerámica y el proceso de fermentación de la chicha de jora.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_2832825_0.JPG?itok=JZV0GLrd"
+  },
+  "COMPLEJO ARQUEOLOGICO DE SILLUSTANI": {
+    "info": "El Complejo arqueológico de Sillustani se encuentra localizado en la península de Umayo, al este de la laguna de igual nombre, en el distrito de Atuncolla, dentro de la provincia de Puno, en el departamento del mismo nombre; a unos 3 915 metros sobre el nivel del mar. El lugar se encuentra próximo a Hatunqolla, mención importante ya que esta era la capital del reino de los Collas, por lo que la construcción de los recintos funerarios estaría en relación con esta cultura, aunque también con la ocupación Inca en el área. Se dice también que en el área, habrían existido tres pueblos que la ocuparan con anterioridad, desde el 200 a. C. entre ellos un pueblo primitivo, luego los Pucara y Tiahuanaco.",
+    "url": "https://dreamy.tours/wp-content/uploads/2021/09/sillustani-puno-tour2-955x370.jpg"
+  },
+  "ISLA DE AMANTANI": {
+    "info": "Dentro del territorio de esta isla se puede encontrar un sistema de andenes construido por grupos como los Lupaka y Pukara en la época prehispánica, así como la mismísima cultura Inca. El Centro Ceremonial Pachatata también se considera un punto arqueológico de interés en Amantaní. Este se ubica en la cima del cerro Coanos y, por supuesto, no podemos obviar el Centro Ceremonial Pachamama en el cerro Llaquistiti. Ambos centros aún mantienen sus ceremonias y rituales anuales hasta el día de hoy.  Al día de hoy, Amantaní es el hogar de un promedio de 4.000 personas, las cuales son quechua hablantes que dominan muy bien el español. Esto último es un gran dato por diversos motivos culturales, pero, principalmente para el visitante lo será por el hecho de que podrán comunicarse a la perfección con sus guías, pues ellos son los más adecuados para ello. ",
+    "url": "https://www.perurail.com/wp-content/uploads/2022/04/Foto-2-768x511.jpg"
+  },
+  "ISLA DE TAQUILE": {
+    "info": "La Isla de Taquile alberga una población de poco más de 2,000 personas, descendientes de una comunidad ancestral que, hasta hoy, conserva muchas de sus costumbres antiguas. Sus habitantes son de habla quechua y su estilo de vida poco o nada fue alterado con el pasar de los años. El pueblo de Taquile es una comunidad esencialmente agrícola que aprovecha el benigno clima del territorio y los recursos hídricos del Titicaca para la mejora de su producción. El principal atractivo de la isla se concentra en el turismo vivencial, a partir del contacto con las costumbres y faenas del pueblo que lo habitan. Convivir con la gente de Taquile, te permitirá conocer los diferentes mitos y creencias que su gente posee.",
+    "url": "https://www.machupicchuperutours.com/wp-content/uploads/isla-taquile-puno-768x432.jpg"
+  },
+  "ISLA UROS DEL LAGO TITICACA": {
+    "info": "A 3,812 m.s.n.m, en el altiplano peruano se encuentra el lago navegable más alto del mundo, el Lago Titicaca, en Puno. En él se pueden encontrar las Islas Flotantes de los Uros, un conjunto de aproximadamente 80 islas construidas de totora, una planta acuática que crece en la superficie del Lago Titicaca. La totora es tejida y tendida sobre otra capa de la misma para construir la superficie de cada isla.  ",
+    "url": "https://perurail.com/wp-content/uploads/2018/12/Foto1_Islas-de-los-Uros-768x521.jpg"
+  },
+  "MUSEO LITICO DE PUKARA": {
+    "info": "El museo fue creado en 1999 y expone bienes culturales recuperados durante la década de 1970 en la zona arqueológica Pukara. La colección está compuesta especialmente por estelas de granito y monolitos de figuras zoomorfas y antropomorfas de diversos formatos correspondientes a la cultura Pukara.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1796461138_0.jpg?itok=e48x_t3C"
+  },
+  "RESERVA NACIONAL DEL TITICACA": {
+    "info": "Área protegida que preserva los recursos naturales propios del ecosistema del lago Titicaca. Tiene un área de 36 180 ha. Se registraron alrededor de 105 especies de aves, destacando el zambullidor del Titicaca (Rollandáa microptera) o keñola, especie endémica y protegida por la legislación nacional. Asimismo, se cuenta con especies nativas de peces y anfibios, entre los que resalta el kelli (Telmatobius culeus) o rana gigante del Titicaca. La flora del lago está representada por 12 variedades de plantas acuáticas, entre las que resaltan la totora y el llacho. La reserva protege la gran diversidad biológica del lago navegable más alto del mundo. Es un destino estupendo para los amantes de la naturaleza y del avistamiento de aves.",
+    "url": "https://elcomercio.pe/resizer/6sHZMhQQJr3wupjn8MKV1xUBYW8=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/3X6UQKCKBRGX7E7M3QF5XNIFLA.jpg"
+  },
+  "TEMPLO MUSEO SAN JUAN DE LETRAN": {
+    "info": "Su construcción se inició entre los años 1567 y 1576 y concluyó en 1602. Su portada monumental de estilo barroco andino es un ejemplo de la arquitectura del Altiplano por las columnas decoradas con estilizaciones de fauna y flora. El museo empezó a funcionar desde 1989 y conserva retablos, esculturas y pinturas de los siglos XVII y XVIII que mantienen su espacio original. Las pinturas forman parte de las series de San Juan Bautista y Santa Teresa de Jesús.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_1567637730_0.jpg?itok=MueT8zA5"
+  },
+  "BANOS TERMALES DE SAN MATEO": {
+    "info": "En un entorno natural y totalmente verde, al sur de la ciudad de Moyobamba y muy cerca de Tarapoto, se ubican los Baños Termales de San Mateo, un complejo recreacional que aprovecha manantiales de agua caliente para el disfrute y el tratamiento médico de ciertas afecciones. Las piscinas que se alimentan de las fuentes de agua, comprenden diferentes niveles de temperatura. Las más antiguas, construidas con piedras en los años 40, aún continúan operativas y alcanzan hasta los 42 grados de temperatura. Otras piscinas se han ido anexando con el paso de los años. En ellas el calor va descendiendo.  La eficacia de las aguas calientes de los Baños Termales de San Mateo está comprobada. Sus componentes y temperatura son ideales para mejorar los síntomas de enfermedades como artritis y reumatosis. Además de eso, por el centro del parque corren las frías aguas de la Quebrada Rumiyacu, en la cual puede chapotear. Hay varios kioscos para picnic, parque infantil, y un restaurante especialista en gastronomía amazónica. ",
+    "url": "https://tarapoto.tours/wp-content/uploads/2016/07/normal_banos-termales-2-1.jpg"
+  },
+  "CATARATA DE AHUASHIYACU": {
+    "info": "La catarata de Ahuashiyacu es la más famosa y visitada de toda la región de San Martín. Probablemente, parte de ello es debido a que apenas se encuentra a apenas 25 minutos de la ciudad. y acceder hasta ella es bastante sencillo.  Está ubicada en el sistema montañoso  que rodea Tarapoto, la cordillera escalera,  y es una zona que, en realidad, aparenta estar bastante mas adentrada en la selva.  La reserva natural que la alberga dispone de abundantes ejemplares de  flora amazónica y dispone de un camino habilitado para el tránsito turístico. De hecho, para llegar hasta la catarata tan solo se caminan 15 minutos desde la entrada.  Además, la catarata también dispone de una pequeña piscina natural  y es posible bañarse e incluso lanzarse desde una roca contigua.  Tenga en cuenta que, a pesar de que Tarapoto goza de un clima cálido, la cascada se encuentra a una mayor altura (465 m sobre el nivel del mar) y sus aguas corren bastante frías. Lo idóneo es ir en un día soleado si pretende bañarse y pasar allí la mañana.  El lugar es un destino muy accesible y  es una opción perfecta para pasar una agradable jornada matinal en familia.",
+    "url": "https://tarapoto.tours/wp-content/uploads/2016/07/tour-ahuashiyacu-3-768x512.jpg"
+  },
+  "RECREO TURISTICO NACIENTE DEL TIOYACU": {
+    "info": "La naciente del tio Yacu es un precioso recreo turístico donde se encuentran las fuentes de un río llamado Yacu. La naciente se nutre de corrientes  subterráneas que emergen hasta la superficie y forman el inicio del rio.  La corriente que se forma está flanqueda por coquetos arboles que le dan sombra formando una estampa paradisíaca y típicamente selvática. Las aguas gozan de un intenso color turquesa y al proceder directamente del subsuelo son limpias y transparentes. También, por el mismo motivo, son bastante frías pero por lo general el clima caluroso de la zona incita a bañarse. Además, la reserva alquila flotadores a los turistas para deslizarse por la ligera corriente del río y jugar en sus aguas. El caudal no suele ser muy fuerte y en muchas zonas no cubre demasiado por lo que también es apto para personas que no sepan nadar y es ideal para acudir en familia.",
+    "url": "https://tarapoto.tours/wp-content/uploads/2016/07/tour-alto-mayo-1-768x512.jpg"
+  },
+  "RESERVA ECOLOGICA TINGANA": {
+    "info": "Un impresionante ecosistema de humedales único por su altitud y biodiversidad, es lo que convierte a la Reserva Ecológica de Tingana en el atractivo ecoturístico más visitado de la región San Martín, y en el bosque anfibio más alto del Perú. Visitar Tingana es como sumergirse en un cuento fantástico en el que navegarás en canoa por las aguas del río Avisado y su mágico bosque inundado, habitado por diferentes especies de animales e inmensos árboles de aguajes y renacos, o más conocidos como los árboles que caminan que, con sus sobresalientes, caprichosas y ensortijadas raíces, dan una apariencia misteriosa al lugar y sirven de madriguera para serpientes, nutrias y ranas, que se camuflan entre sus troncos.",
+    "url": "https://tarapoto.com/wp-content/uploads/2020/06/reserva-ecologica-tingana.jpg"
+  },
+  "MUSEO DE SITIO LAS PEANAS": {
+    "info": "El museo fue creado el 18 de agosto de 1989, presenta dos salas de exposición y un sistema de pasarela aérea en madera diseñada para observar las tumbas in situ. Mediante paneles e infografías explica el proceso cultural y geografía de Tacna. El periodo de los primeros cazadores y recolectores está representado por bienes culturales líticos e imágenes de arte rupestre de Toquepala y Vilavilani. La presencia Wari y Tiahuanaco en la región se representa a través de ilustraciones y bienes culturales de cerámica y textil.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_518133901_1.jpg?itok=IUNEq-1l"
+  },
+  "PARQUE NACIONAL CERROS DE AMOTAPE": {
+    "info": "El Parque Nacional Cerros de Amotape (PNCA) es un espectacular y  fascinante oasis de vida en la costa peruana que se extiende sobre las estribaciones del macizo de los Amotapes. Es un área natural protegida que presenta características únicas en todo el país y que ocupa la porción más importante de la fisiografía más accidentada de la Reserva de Biosfera del Noroeste (conformada por el PNCA, la Reserva Nacional de Tumbes y el Coto de Caza el Angolo). Es atravesado en gran parte por el río Tumbes (el único río navegable de la costa), presentando a la margen derecha (lado este) el Bosque Tropical del Pacífico con toda su frondosa selva, la cual se asemeja a los bosques amazónicos. En su margen izquierda se encuentra el Bosque Seco Ecuatorial con su paisaje enigmático y sobrecogedor.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Valle_del_r%C3%ADo_Tumbes_%289103997357%29.jpg"
+  },
+  "MUSEO DE SITIO CABEZA DE VACA GRAN CHILIMASA": {
+    "info": "El museo fue creado en 1993, ofrece a sus visitantes 2 salas de exhibición permanente en una de las cuáles se exhiben alrededor de 200 piezas arqueológicas provenientes del Cabeza de Vaca y otros sitios arqueológicos de Tumbes. Presenta otra sala donde se exhiben fotografías de de la red vial inca o Qhapaq Ñan; luego se complementa la visita con el recorrido en la por el circuito turístico en la Zona Arqueológica Monumental Cabeza de Vaca. Además, se presentan exhibiciones fotográficas temporales.",
+    "url": "https://museos.cultura.pe/sites/default/files/styles/carrusel_museo_full/public/museos/galeria/rnm_877265903_1.JPG?itok=1h0KoabS"
+  },
+  "SANTUARIO NACIONAL LOS MANGLARES DE TUMBES": {
+    "info": "El Santuario Nacional Los Manglares de Tumbes está ubicado en la costa fronteriza con Ecuador, un lugar único en donde se encuentra la mayor extensión de manglares del país. Es por eso que el valor de este ecosistema no solo se debe a su diversidad biológica, sino también a que muchas poblaciones humanas obtienen beneficios directos a través de la extracción, comercialización y consumo de los productos hidrobiológicos que obtienen. El Santuario custodia el majestuoso bosque de manglar y protege una alta diversidad biológica, además de incentivar la recreación y aumentar las corrientes turísticas en los lugares aledaños. El manglar es un tipo de ecosistema de zonas tropicales que toma su nombre del mangle, un árbol adaptado fisiológica y anatómicamente a las aguas con mucha salinidad y que crece solo en lugares inundados alternadamente por el mar y la desembocadura de alguna fuente de agua dulce. En Tumbes se encuentra desde el delta que forma la desembocadura del río Tumbes hasta la Punta Capones, en la frontera con el Ecuador.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Manglares_de_Tumbes_by_boat.jpg"
+  },
+  "CAIDA DE AGUA DUCHA DEL DIABLO": {
+    "info": "En el caso de la Ducha del Diablo, aquella es una catarata que forma parte del Boquerón del Padre Abad y que se ubica en la ciudad de Aguaytía, en el departamento de Ucayali. Este lugar de la Amazonía fue descubierto por el Padre Abad en 1757 y recibe el nombre de Ducha del Diablo primero, por la formación de un rostro en la roca donde se precipita el agua de la catarata, mismo que, tiene como peculiaridad, presentar una forma demoniaca, en torno a la cual, según algunos pobladores, ocurren algunos fenómenos paranormales. Y Segundo, por las diferentes leyendas que, sobre el origen, se tejen acerca de aquella catarata y su formación rocosa.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Ducha_del_Diablo%2C_Aguayt%C3%ADa.png"
+  },
+  "CAIDA DE AGUA VELO DE LA NOVIA": {
+    "info": "La Catarata Velo de la Novia es una salto de agua que se sitúa en la Provincia de Chanchamayo, perteneciente al Departamento de Junín, en el Perú. La catarata está formada por un salto de aproximadamente 55 m de altura y 30 m de anchura en la base.",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Velo_de_la_Novia_Falls.jpg"
+  },
+  "CATARATAS DE SHAMBILLO": {
+    "info": "Las cataratas de Shambillo se ubican en el caserío Alto Shambillo, jurisdicción del Centro Poblado de Boquerón, en el distrito Padre Abad, en la provincia del mismo nombre.Esta catarata presenta 3 pisos altitudinales o saltos pequeños, la primera que comienza en la cima mide un aproximado de 10 metros, el segundo 40 y el tercero el más alto unos 60 metros sumando en total 110 metros de altura que al caer el agua de color verde salpicando y lavando las rocas y forma una gran poza de 30 metros cuadrados que discurre entre las piedras formándose un gran río. ",
+    "url": "https://www.deperu.com/imagenes/afp/2020/7c41cfc3812ed176cfe78fd30783bb351ccce01d.jpg"
+  },
+  "PUENTE AGUAYTIA": {
+    "info": "Cruza el río del mismo nombre, junto al poblado homónimo, en la provincia de Padre Abad, departamento de Ucayali. Forma parte de la carretera Federico Basadre, que une la ciudad de Tingo María (en Huánuco) con la selvática ciudad de Pucallpa (capital de Ucayali).",
+    "url": "https://2.bp.blogspot.com/_JzSqd6YaCaY/SjXJqgas-AI/AAAAAAAAEoM/H2GiC6bSMmg/s1600/Rendy.jpg"
+  },
+  "ZOOLOGICO PARQUE NATURAL DE PUCALLPA": {
+    "info": "El Parque Natural de Pucallpa es un Zoológico situado en la margen sur de la ciudad de ucallpa, cercano a los centros comerciales y otros lugares de interés para los turistas. Es un centro turístico natural de singular belleza paisajista y calidad ambiental en un área eco-urbana. Además de ello es un atractivo cultural en donde se incorpora un museo regional y una zona de esparcimiento, una buena opción para visitar en familia, sobre todo para los que viajan con niños",
+    "url": "https://intilandtours.pe/imagen/zoo-pucallpa-banner.jpg"
+  }
 }

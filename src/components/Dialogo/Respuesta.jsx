@@ -16,9 +16,9 @@ const Respuesta = ({ estado, continuar, categoria, variable }) => {
         setVariableRespuesta(variable)
         setCategoriaVariable(categoria)
         //condicional para asignacion de los datos informativos
-
+        console.log(variable)
         if(categoria === 'lugares'){
-            setDatosLugar(lugares['Santuario Nacional de Ampay'])
+            setDatosLugar(lugares[variable])
         } else if(categoria === 'comidas'){
             setDatosLugar(comidas[variable])
         }  
