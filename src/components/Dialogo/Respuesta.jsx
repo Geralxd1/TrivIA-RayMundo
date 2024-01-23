@@ -7,7 +7,7 @@ import { Box, Paper, Slide, Typography } from '@mui/material';
 import Alternativas from '../Botones/Alternativas';
 import BotonPrincipal from '../Botones/BotonPrincipal';
 
-const Respuesta = ({ estado, continuar, categoria, variable }) => {
+const Respuesta = ({ estado, continuar, categoria, variable, correcta }) => {
     const [checked, setChecked] = useState(false);
     const [variableRespuesta, setVariableRespuesta] = useState('');
     const [datosLugar, setDatosLugar] = useState({});
@@ -16,7 +16,7 @@ const Respuesta = ({ estado, continuar, categoria, variable }) => {
         setVariableRespuesta(variable)
         setCategoriaVariable(categoria)
         //condicional para asignacion de los datos informativos
-        console.log(variable)
+        console.log(correcta)
         if(categoria === 'lugares'){
             setDatosLugar(lugares[variable])
         } else if(categoria === 'comidas'){
@@ -81,12 +81,12 @@ const Respuesta = ({ estado, continuar, categoria, variable }) => {
                         sx={{
                             fontSize: { xs: '3rem', md: '6rem' },
                             lineHeight: 'normal',
-                            color: '#26bf00',
+                            color: estado === "correcto" ? '#26bf00' : 'red',
                             WebkitTextStrokeWidth: '1px',
                             WebkitTextStrokeColor: '#fee868',
                         }}
                     >¡{estado.toUpperCase()}!</Box>
-                    <Alternativas texto={variableRespuesta} />
+                    <Alternativas texto={`${variableRespuesta} es de  ${correcta}`} />
                     <Box component={'div'}
                         sx={{
                             display: 'flex',

@@ -6,7 +6,7 @@ import { getData } from '../services/apiService'
 
 const Trivia = ({ validarRespuestaExterno }) => {
     const [respondido, setRespondido] = useState(false);
-    const [seconds, setSeconds] = useState(40);
+    const [seconds, setSeconds] = useState(15);
     const [variablePregunta, setVariablePregunta] = useState('');
     const [alternativa1, setAlternativa1] = useState('');
     const [alternativa2, setAlternativa2] = useState('');
@@ -24,6 +24,7 @@ const Trivia = ({ validarRespuestaExterno }) => {
 
             if (response) {
                 setDatos(response)
+                console.log(response)
                 setAlternativa1(response.REGION1)
                 setAlternativa2(response.REGION2)
                 setAlternativa3(response.REGION3)
@@ -81,9 +82,9 @@ const Trivia = ({ validarRespuestaExterno }) => {
 
             if (alternativa === respuestCorrecta) {
                 localStorage.setItem('score', puntajeActual + 100);
-                validarRespuestaExterno('correcto', categoria, datos['REGION ALEATORIA']);
+                validarRespuestaExterno('correcto', categoria, datos['REGION ALEATORIA'],respuestCorrecta);
             } else {
-                validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA']);
+                validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA'],respuestCorrecta);
             }
         }
     }
@@ -107,7 +108,7 @@ const Trivia = ({ validarRespuestaExterno }) => {
                     // Si el tiempo se agota y no se ha respondido, marcar como respondido e enviar 'incorrecto'
                     if (!respondido) {
                         setRespondido(true);
-                        validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA']);
+                        validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA'],respuestCorrecta);
                     }
                     return 0;
                 }

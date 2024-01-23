@@ -20,15 +20,17 @@ const Home = () => {
     // Estos son por pregunta :D
     const [categoria, setCategoria] = useState('')
     const [variable, setVariable] =  useState('')
+    const [correcta, setCorrecta] =  useState('')
     // Función para cambiar de pantalla
     const cambiarPantalla = (nuevaPantalla) => {
         setPantalla(nuevaPantalla);
     };
     //validar respeusta xde
-    const validarRespuestaExterno = (validacion,categoria,variable) => {
+    const validarRespuestaExterno = (validacion,categoria,variable,correcta) => {
         setEstadoRespuesta(validacion)
         setVariable(variable)
         setCategoria(categoria)
+        setCorrecta(correcta)
         cambiarPantalla('mensajeRespuesta')
     }
     //This is para contar rondas
@@ -81,7 +83,7 @@ const Home = () => {
                 <Trivia validarRespuestaExterno={validarRespuestaExterno} />
             )}
             {pantalla === 'mensajeRespuesta' && (
-                <Respuesta estado={estadoRespuesta} continuar={continuar} categoria={categoria} variable={variable}/>
+                <Respuesta estado={estadoRespuesta} continuar={continuar} categoria={categoria} variable={variable} correcta={correcta}/>
             )}
             {pantalla === 'fin' && (
                 <Fin cambiarPantalla={cambiarPantalla} reiniciar={reiniciar}/>
