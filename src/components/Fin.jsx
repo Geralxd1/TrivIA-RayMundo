@@ -1,23 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Paper, Slide, Typography } from '@mui/material';
 import BotonPrincipal from './Botones/BotonPrincipal';
+import { postUser } from '../services/apiService';
 
-const Fin = ({cambiarPantalla, reiniciar}) => {
+const Fin = ({ cambiarPantalla, reiniciar }) => {
     const [checked, setChecked] = useState(false);
     const [nombre, setNombre] = useState('');
     const [score, setScore] = useState('');
 
-    function removerDatos(){
+    function removerDatos() {
         localStorage.removeItem('nombreUsuario');
         localStorage.removeItem('score');
         localStorage.removeItem('categoria');
         reiniciar();
     }
+    const enviarUsuario = async () => {
+        const nickname = localStorage.getItem('nombreJugador'); 
+        const score = localStorage.getItem('score');
+
+        try {
+            const respuesta = await postUser(nickname, score);
+            // Puedes manejar la respuesta según tus necesidades
+        } catch (error) {
+            // Puedes manejar el error según tus necesidades
+            alert(error)
+        }
+    };
     useEffect(() => {
         setNombre(localStorage.getItem('nombreJugador'))
         setScore(localStorage.getItem('score'))
-        setChecked(true)
+        setChecked(true);
     }, []);
+    
+    // Llamar a enviarUsuario fuera de useEffect
+    useEffect(() => {
+        if (checked) {
+            enviarUsuario();
+        }
+    }, [checked]);
 
     return (
         <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
@@ -95,8 +115,8 @@ const Fin = ({cambiarPantalla, reiniciar}) => {
                             marginTop: '1.5rem',
                             flexDirection: { xs: 'column', md: 'row' }
                         }}>
-                        <BotonPrincipal texto={'Ver Ranking'} onClick={() => {removerDatos();cambiarPantalla('ranking')}} />
-                        <BotonPrincipal texto={'Ir a inicio'} onClick={() => {removerDatos();cambiarPantalla('inicio')}} />
+                        <BotonPrincipal texto={'Ver Ranking'} onClick={() => { removerDatos(); cambiarPantalla('ranking') }} />
+                        <BotonPrincipal texto={'Ir a inicio'} onClick={() => { removerDatos(); cambiarPantalla('inicio') }} />
                     </Box>
                 </Paper>
             </Box>

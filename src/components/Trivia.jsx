@@ -2,64 +2,93 @@ import { Box, Paper } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import TextoPregunta from './Textos/TextoPregunta'
 import Alternativas from './Botones/Alternativas'
+import { getData } from '../services/apiService'
 
 const Trivia = ({ validarRespuestaExterno }) => {
     const [respondido, setRespondido] = useState(false);
-    const [seconds, setSeconds] = useState(30);
-    const [pregunta, setPregunta] = useState('');
+    const [seconds, setSeconds] = useState(40);
     const [variablePregunta, setVariablePregunta] = useState('');
     const [alternativa1, setAlternativa1] = useState('');
     const [alternativa2, setAlternativa2] = useState('');
     const [alternativa3, setAlternativa3] = useState('');
     const [alternativas, setAlternativas] = useState(['', '', '']);
     const [respuestCorrecta, setRespuestaCorrecta] = useState('');
-    // Se obtiene los datos de pregunta y respuesats de la api y se asignan supongo xde
+    const [datos, setDatos] = useState({})
+    const [pregunta, setPregunta] = useState('')
+    const [categoria, setCategoria] = useState('')
+    let categoria_comb = ''
+    let respuestaBien = ''
+    const obtenerDatos = async (cat) => {
+        try {
+            const response = await getData(cat);
 
-    function obtenerDatos() {
-        //por mientras 
-        setAlternativa1('Puno');
-        setAlternativa2('Lima');
-        setAlternativa3('Cuzco');
+            if (response) {
+                setDatos(response)
+                setAlternativa1(response.REGION1)
+                setAlternativa2(response.REGION2)
+                setAlternativa3(response.REGION3)
+                setRespuestaCorrecta(response.REGION1)
+                respuestaBien = response.REGION1
+                asignarPregunta(response['REGION ALEATORIA'])
 
-    }
-    // dar la pregunta segun la categoria ps
-    function asignarPregunta() {
-        setVariablePregunta('Lago Titicaca')
-        //obtenemos categoria
+            } else {
+            }
+        } catch (error) {
+            alert(error)
+        }
+    };
+
+    // dar la pregunta según la categoría
+    // dar la pregunta según la categoría
+    // dar la pregunta según la categoría
+
+    function asignarPregunta(vario) {
         const categoria = localStorage.getItem('categoria');
+        // Nueva variable para almacenar la pregunta asignada
+        let preguntaAsignada = '';
+        let esDestino = categoria_comb
+
         switch (categoria) {
             case 'destinosTuristicos':
-                setPregunta(`¿En que departamento del Peru se encuentra ${variablePregunta}?`)
+                preguntaAsignada = `¿En qué departamento del Peru se encuentra ${vario}?`;
+                setCategoria('lugares')
                 break;
             case 'platosTipicos':
-                setPregunta(`¿De que Departamento del Peru es natural ${variablePregunta}?`)
+                preguntaAsignada = `¿De dónde es originario el platillo conocido como ${vario}"?`;
+                setCategoria('comidas')
                 break;
-            case 'cambinacion':
-                //implemntar logica de combinacion de llamada a os apis de forma
+            case 'combinacion':
+                preguntaAsignada = esDestino ? `¿En qué departamento del Peru se encuentra ${vario}?` : `¿De dónde es originario el platillo conocido como ${vario}"?`;
+                if(esDestino){
+                    setCategoria('lugares')
+                }else{
+                    setCategoria('comidas')
+                }
+
                 break;
         }
+        setPregunta(preguntaAsignada)
+        // Seleccionar aleatoriamente una pregunta de la lista
+
     }
 
-    //validar respuesta
+    // validar respuesta
     function validarRespuestaInterno(alternativa) {
         // Verifica si ya se ha respondido
         if (!respondido) {
-            // Marca como respondido
             setRespondido(true);
-
             const puntajeActual = parseInt(localStorage.getItem('score')) || 0;
-            console.log('puntaje antes', puntajeActual);
 
-            if (alternativa === 'Puno') {
+            if (alternativa === respuestCorrecta) {
                 localStorage.setItem('score', puntajeActual + 100);
-                validarRespuestaExterno('correcto');
+                validarRespuestaExterno('correcto', categoria, datos['REGION ALEATORIA']);
             } else {
-                validarRespuestaExterno('incorrecto');
+                validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA']);
             }
         }
     }
 
-    //barajar alternativas
+    // barajar alternativas
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -67,14 +96,8 @@ const Trivia = ({ validarRespuestaExterno }) => {
         }
         return array;
     };
+
     useEffect(() => {
-        obtenerDatos();
-        asignarPregunta();
-
-        // Mezclar las alternativas al montar el componente
-        const shuffledAlternativas = shuffleArray([alternativa1, alternativa2, alternativa3]);
-        setAlternativas(shuffledAlternativas);
-
         // Temporizador
         const intervalId = setInterval(() => {
             setSeconds((prevSeconds) => {
@@ -84,19 +107,37 @@ const Trivia = ({ validarRespuestaExterno }) => {
                     // Si el tiempo se agota y no se ha respondido, marcar como respondido e enviar 'incorrecto'
                     if (!respondido) {
                         setRespondido(true);
-                        validarRespuestaExterno('incorrecto');
+                        validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA']);
                     }
                     return 0;
                 }
             });
         }, 1000);
 
+        // Cleanup: detener el temporizador cuando el componente se desmonta
         return () => clearInterval(intervalId);
     }, [respondido]);
 
     useEffect(() => {
-        setAlternativas(shuffleArray([alternativa1, alternativa2, alternativa3]));
+        // Mezclar las alternativas al montar el componente
+        const shuffledAlternativas = shuffleArray([alternativa1, alternativa2, alternativa3]);
+        setAlternativas(shuffledAlternativas);
     }, [alternativa1, alternativa2, alternativa3]);
+
+    useEffect(() => {
+        const categoria = localStorage.getItem('categoria');
+        if (categoria === 'destinosTuristicos')
+            obtenerDatos('turistico_estruc')
+        else if (categoria === 'platosTipicos')
+            obtenerDatos('comida_estruc')
+        else if (categoria === 'combinacion') {
+            const esDestino = Math.random() < 0.5;
+            const categoriaElegida = esDestino ? 'turistico_estruc' : 'comida_estruc';
+            categoria_comb = esDestino ? true : false
+            obtenerDatos(categoriaElegida)
+        }
+    }, []);
+
     return (
         <Box component={'div'}>
             <Box component={'div'}

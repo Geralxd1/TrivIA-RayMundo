@@ -2,17 +2,26 @@ import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import lugares from "../../assets/Lugares.json"
+import comidas from "../../assets/Comidas.json"
 import { Box, Paper, Slide, Typography } from '@mui/material';
 import Alternativas from '../Botones/Alternativas';
 import BotonPrincipal from '../Botones/BotonPrincipal';
 
-const Respuesta = ({ estado, continuar }) => {
+const Respuesta = ({ estado, continuar, categoria, variable }) => {
     const [checked, setChecked] = useState(false);
-    const [lugar, setLugar] = useState('');
+    const [variableRespuesta, setVariableRespuesta] = useState('');
     const [datosLugar, setDatosLugar] = useState({});
-
+    const [categoriaVariable, setCategoriaVariable] = useState('');
     useEffect(() => {
-        setLugar('puno')
+        setVariableRespuesta(variable)
+        setCategoriaVariable(categoria)
+        //condicional para asignacion de los datos informativos
+
+        if(categoria === 'lugares'){
+            setDatosLugar(lugares['Santuario Nacional de Ampay'])
+        } else if(categoria === 'comidas'){
+            setDatosLugar(comidas[variable])
+        }  
         setChecked(true)
     }, []);
 
@@ -77,7 +86,7 @@ const Respuesta = ({ estado, continuar }) => {
                             WebkitTextStrokeColor: '#fee868',
                         }}
                     >¡{estado.toUpperCase()}!</Box>
-                    <Alternativas texto={lugar} />
+                    <Alternativas texto={variableRespuesta} />
                     <Box component={'div'}
                         sx={{
                             display: 'flex',
@@ -93,16 +102,17 @@ const Respuesta = ({ estado, continuar }) => {
                                 width:'100%'
                             }}>
                             <Typography variant='body' sx={{display:{xs:'flex', md:'none'}}}>
-                                {lugares["Cataratas de Gocta"].info}
+                                {datosLugar.info}
                             </Typography>
                             <Typography variant='h5' sx={{display:{xs:'none', md:'flex'}}}>
-                                {lugares["Cataratas de Gocta"].info}
+                                {datosLugar.info}
                             </Typography>
                         </Paper>
                         <Box component={'img'}
-                            src={lugares["Cataratas de Gocta"].url}
+                            src={datosLugar.url}
                             sx={{
-                                width: { xs: '80%', md: '30%' },
+                                maxWidth: {xs:'70%', md:'40%'},
+                                height: { xs: '20vh', md: '70%' },
                                 border: '2px solid black',
                                 marginTop: '1rem'
                             }} />

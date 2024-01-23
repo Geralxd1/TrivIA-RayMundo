@@ -8,7 +8,7 @@ const TextoPregunta = ({texto}) => {
         sx={{fontFamily:'Patrick Hand', textAlign:'center', marginBottom:'2rem', display:{xs:'none', md:'flex'}}}
         >{texto}</Typography>
 
-        <Typography variant='h3' component={'p'} color={'#571845'}
+        <Typography variant='h4' component={'p'} color={'#571845'}
         sx={{fontFamily:'Patrick Hand', textAlign:'center', marginBottom:'2rem',display:{xs:'flex', md:'none'}}}
         >{texto}</Typography>
         </>

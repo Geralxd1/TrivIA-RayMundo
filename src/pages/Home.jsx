@@ -1,13 +1,5 @@
 import { Box, FormControl, Paper } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import BotonPrincipal from '../components/Botones/BotonPrincipal'
-import CampoInput from '../components/CamposTexto/CampoInput'
-import Slide from '@mui/material/Slide';
-import TextoPregunta from '../components/Textos/TextoPregunta';
-import Alternativas from '../components/Botones/Alternativas';
-import { postUsername, getUserId, postScore } from '../services/apiService';
-import ENDPOINTS from '../EndPoints/EndPoints';
-import ItemRanking from '../components/Ranking/ItemRanking';
 import Inicio from '../components/Inicio';
 import Ranking from '../components/Ranking/Ranking';
 import Nombre from '../components/Nombre';
@@ -23,19 +15,22 @@ const Home = () => {
     const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
     const [estadoRespuesta, setEstadoRespuesta] = useState('')
     const [ronda, setRonda] = useState(1);
+    // Estos son por pregunta :D
+    const [categoria, setCategoria] = useState('')
+    const [variable, setVariable] =  useState('')
     // Función para cambiar de pantalla
     const cambiarPantalla = (nuevaPantalla) => {
         setPantalla(nuevaPantalla);
     };
     //validar respeusta xde
-    const validarRespuestaExterno = (validacion) => {
-        console.log('puntaje en home', localStorage.getItem('score'))
+    const validarRespuestaExterno = (validacion,categoria,variable) => {
         setEstadoRespuesta(validacion)
+        setVariable(variable)
+        setCategoria(categoria)
         cambiarPantalla('mensajeRespuesta')
     }
     //This is para contar rondas
     const continuar = () => {
-        console.log(ronda)
         setRonda(prevRonda => prevRonda + 1);
         cambiarPantalla('trivia');
     };
@@ -84,7 +79,7 @@ const Home = () => {
                 <Trivia validarRespuestaExterno={validarRespuestaExterno} />
             )}
             {pantalla === 'mensajeRespuesta' && (
-                <Respuesta estado={estadoRespuesta} continuar={continuar} />
+                <Respuesta estado={estadoRespuesta} continuar={continuar} categoria={categoria} variable={variable}/>
             )}
             {pantalla === 'fin' && (
                 <Fin cambiarPantalla={cambiarPantalla} reiniciar={reiniciar}/>

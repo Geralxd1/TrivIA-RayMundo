@@ -4,52 +4,39 @@ import ENDPOINTS from '../EndPoints/EndPoints';
 
 const apiUrl = ENDPOINTS.endGuardarUsuario();
 
-const postUsername = async (username) => {
+export const postUser = async (nickname, score) => {
     try {
-        const response = await axios.post(
-            `${apiUrl}`,
-            { username },
-        );
-
+        const response = await axios.post(apiUrl, {
+            nickname: nickname,
+            score: score,
+        });
         return response.data; // Puede contener el ID del usuario recién creado
     } catch (error) {
-        console.error('Error al enviar el nombre de usuario:', error);
+        alert(error)
         throw error;
     }
 };
 
-const getUserId = async (username) => {
+const endRanking = ENDPOINTS.endObtenerDatosRanking()
+export const getDatosRanking = async () => {
     try {
-        const response = await axios.get(
-            `${apiUrl}/users`,
-            {
-                params: { username },
-                headers: { 'api-key': apiKey }
-            }
-        );
-
-        // Suponiendo que la respuesta contiene un array de usuarios y tomamos el primer resultado
-        const user = response.data[0];
-        return user ? user.id : null;
+        const response = await axios.get(endRanking);
+        return response.data;
     } catch (error) {
-        console.error('Error al obtener el ID del usuario:', error);
-        throw error;
+        alert(error)
+        return null;
     }
 };
 
-const postScore = async (userId, score) => {
+// Función para realizar una solicitud GET
+const endDatos = ENDPOINTS.endObtenerDataPregunta()
+export const getData = async (endPersonalizado) => {
     try {
-        const response = await axios.post(
-            `${apiUrl}/scores`,
-            { userId, score },
-            { headers: { 'api-key': apiKey } }
-        );
-
-        return response.data; // Puede contener información adicional sobre la asignación de puntajes
+        const response = await axios.get(`${endDatos}/${endPersonalizado}`);
+        const datos = response.data;
+        return datos;
     } catch (error) {
-        console.error('Error al enviar el puntaje:', error);
-        throw error;
+        alert("Error al obtener datos:", error);
+        return null;
     }
 };
-
-export { postUsername, getUserId, postScore };

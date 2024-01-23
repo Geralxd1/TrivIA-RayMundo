@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import ItemRanking from './ItemRanking'
 import { Box, Paper } from '@mui/material'
 import BotonPrincipal from '../Botones/BotonPrincipal'
+import { getDatosRanking } from '../../services/apiService'
 
 const Ranking = ({ cambiarPantalla }) => {
+    const [rankingData, setRankingData] = useState([]);
+
+    useEffect(() => {
+        const obtenerDatos = async () => {
+            try {
+                const response = await getDatosRanking();
+                setRankingData(response || []); // Asegúrate de que response.data esté definido
+            } catch (error) {
+            alert(error)
+            }
+        };
+
+        obtenerDatos();
+        
+    }, []);
     return (
         <Box component={'div'} sx={{}}>
             <Box component={'div'}
@@ -55,21 +71,14 @@ const Ranking = ({ cambiarPantalla }) => {
                         overflowY: 'scroll', // Habilita el desbordamiento vertical solo para este contenedor
                     }}
                 >
-                    <ItemRanking puesto={1} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={2} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={3} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={4} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={5} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={6} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={7} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={8} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={9} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={10} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={11} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={12} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={13} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={14} nombre={'Nombre Jugador'} puntaje={'10000'} />
-                    <ItemRanking puesto={15} nombre={'Nombre Jugador'} puntaje={'10000'} />
+                    {rankingData.map((item, index) => (
+                        <ItemRanking
+                            key={item.id}
+                            puesto={index + 1}
+                            nombre={item.nickname}
+                            puntaje={item.score}
+                        />
+                    ))}
                 </Box>
             </Paper>
             <Box component={'div'}
