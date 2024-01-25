@@ -1,7 +1,7 @@
 import { Input, TextField } from '@mui/material'
 import React from 'react'
 
-const CampoInput = ({ placeholder, onChange }) => {
+const CampoInput = ({ placeholder, onChange,onKeyDown }) => {
     return (
         <Input
             sx={{
@@ -19,6 +19,7 @@ const CampoInput = ({ placeholder, onChange }) => {
             }}
             required
             onChange={onChange}
+            onKeyDown={onKeyDown}
         ></Input>
     )
 }

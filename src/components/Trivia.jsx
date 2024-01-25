@@ -24,7 +24,6 @@ const Trivia = ({ validarRespuestaExterno }) => {
 
             if (response) {
                 setDatos(response)
-                console.log(response)
                 setAlternativa1(response.REGION1)
                 setAlternativa2(response.REGION2)
                 setAlternativa3(response.REGION3)
@@ -60,9 +59,9 @@ const Trivia = ({ validarRespuestaExterno }) => {
                 break;
             case 'combinacion':
                 preguntaAsignada = esDestino ? `¿En qué departamento del Peru se encuentra ${vario}?` : `¿De dónde es originario el platillo conocido como ${vario}"?`;
-                if(esDestino){
+                if (esDestino) {
                     setCategoria('lugares')
-                }else{
+                } else {
                     setCategoria('comidas')
                 }
 
@@ -82,21 +81,12 @@ const Trivia = ({ validarRespuestaExterno }) => {
 
             if (alternativa === respuestCorrecta) {
                 localStorage.setItem('score', puntajeActual + 100);
-                validarRespuestaExterno('correcto', categoria, datos['REGION ALEATORIA'],respuestCorrecta);
+                validarRespuestaExterno('correcto', categoria, datos['REGION ALEATORIA'], respuestCorrecta);
             } else {
-                validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA'],respuestCorrecta);
+                validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA'], respuestCorrecta);
             }
         }
     }
-
-    // barajar alternativas
-    const shuffleArray = (array) => {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    };
 
     useEffect(() => {
         // Temporizador
@@ -107,8 +97,7 @@ const Trivia = ({ validarRespuestaExterno }) => {
                 } else {
                     // Si el tiempo se agota y no se ha respondido, marcar como respondido e enviar 'incorrecto'
                     if (!respondido) {
-                        setRespondido(true);
-                        validarRespuestaExterno('incorrecto', categoria, datos['REGION ALEATORIA'],respuestCorrecta);
+                        validarRespuestaInterno('incorrecto');
                     }
                     return 0;
                 }
@@ -117,8 +106,15 @@ const Trivia = ({ validarRespuestaExterno }) => {
 
         // Cleanup: detener el temporizador cuando el componente se desmonta
         return () => clearInterval(intervalId);
-    }, [respondido]);
-
+    }, [respondido, respuestCorrecta, categoria, datos]);
+    // barajar alternativas
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
     useEffect(() => {
         // Mezclar las alternativas al montar el componente
         const shuffledAlternativas = shuffleArray([alternativa1, alternativa2, alternativa3]);
@@ -138,6 +134,22 @@ const Trivia = ({ validarRespuestaExterno }) => {
             obtenerDatos(categoriaElegida)
         }
     }, []);
+    useEffect(() => {
+        if (!datos) {
+            const categoria = localStorage.getItem('categoria');
+            if (categoria === 'destinosTuristicos')
+                obtenerDatos('turistico_estruc')
+            else if (categoria === 'platosTipicos')
+                obtenerDatos('comida_estruc')
+            else if (categoria === 'combinacion') {
+                const esDestino = Math.random() < 0.5;
+                const categoriaElegida = esDestino ? 'turistico_estruc' : 'comida_estruc';
+                categoria_comb = esDestino ? true : false
+                obtenerDatos(categoriaElegida)
+            }
+        }
+    }, [datos]);
+
 
     return (
         <Box component={'div'}>

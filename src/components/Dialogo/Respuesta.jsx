@@ -16,7 +16,6 @@ const Respuesta = ({ estado, continuar, categoria, variable, correcta }) => {
         setVariableRespuesta(variable)
         setCategoriaVariable(categoria)
         //condicional para asignacion de los datos informativos
-        console.log(correcta)
         if(categoria === 'lugares'){
             setDatosLugar(lugares[variable])
         } else if(categoria === 'comidas'){

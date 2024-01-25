@@ -11,7 +11,6 @@ import ENDPOINTS from '../EndPoints/EndPoints';
 
 //Llamada a endpoints
 const Home = () => {
-    console.log(ENDPOINTS.endObtenerDataPregunta())
     const [pantalla, setPantalla] = useState('inicio'); // Estado para controlar qué pantalla mostrar
     const [nombreJugador, setNombreJugador] = useState('')
     const [mostrarRespuesta, setMostrarRespuesta] = useState(false);

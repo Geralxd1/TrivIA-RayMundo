@@ -27,7 +27,13 @@ const Nombre = ({ cambiarPantalla }) => {
         // Cambiamos pantalla a elegir categoría
         cambiarPantalla('elegirCategoria');
     }
-
+    function handleKeyDown(event) {
+        // Si se presiona Enter, guarda el nombre
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Evita que se envíe el formulario por defecto
+            guardarNombre();
+        }
+    }
     useEffect(() => {
         setChecked(true);
     }, []);
@@ -47,6 +53,7 @@ const Nombre = ({ cambiarPantalla }) => {
                     <CampoInput
                         placeholder={'Escribe tu nombre aquí'}
                         onChange={(e) => setNombre(e.target.value)}
+                        onKeyDown={handleKeyDown}
                     />
                     <BotonPrincipal texto={'Guardar'} onClick={() => guardarNombre()} />
                     <BotonPrincipal texto={'Volver Atrás'} onClick={() => cambiarPantalla('inicio')} />
